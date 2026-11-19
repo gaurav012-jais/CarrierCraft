@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"surface-bright":"#1a2438","secondary":"#88b4cc","on-secondary":"#001f2e","secondary-container":"#1a3a4e","tertiary-container":"#3d2060","tertiary":"#c8a0f0","on-surface":"#e0e8f0","on-tertiary-container":"#e8d0ff","inverse-surface":"#e0e8f0","surface-tint":"#7dd3fc","on-primary-fixed-variant":"#004d73","tertiary-fixed":"#e8d0ff","surface-variant":"#1a2438","on-primary":"#001f2e","primary-fixed-dim":"#7dd3fc","on-primary-container":"#c8eaff","error-container":"#3d1414","surface-dim":"#0f1524","on-secondary-container":"#c0d8e8","secondary-fixed-dim":"#88b4cc","on-primary-fixed":"#001f2e","tertiary-fixed-dim":"#c8a0f0","background":"#0a0e1a","secondary-fixed":"#c0d8e8","outline-variant":"#2a3a48","on-error-container":"#ffb3b3","primary":"#7dd3fc","surface-container-lowest":"#0a0e1a","error":"#ff6b6b","outline":"#4a6070","surface-container-highest":"#202c42","on-secondary-fixed":"#0d1f2b","surface-container":"#141c2e","inverse-primary":"#0a4c6e","on-background":"#e0e8f0","primary-fixed":"#c8eaff","on-tertiary-fixed":"#1a002e","inverse-on-surface":"#0a0e1a","on-surface-variant":"#a0b4c4","on-secondary-fixed-variant":"#2a4a5e","surface-container-low":"#111828","on-tertiary-fixed-variant":"#4d2a73","surface":"#0f1524","on-error":"#1a0000","surface-container-high":"#1a2438","primary-container":"#0e4d6e","on-tertiary":"#1a002e"},"borderRadius":{"DEFAULT":"0.5rem","lg":"1rem","xl":"1.5rem","full":"9999px"},"spacing":{},"fontFamily":{"headline":["Inter"],"display":["Inter"],"body":["Inter"],"label":["Inter"]},"fontSize":{}}}}</script></head><body class="bg-background font-body text-on-surface min-h-screen selection:bg-primary/20 selection:text-primary"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-dim/75 backdrop-blur-2xl z-50 flex flex-col pt-5 pb-6 border-r border-primary/10 shadow-[0_0_30px_rgba(125,211,252,0.03)]"><div class="px-6 mb-8 flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shadow-[0_0_16px_rgba(125,211,252,0.15)]"><span class="material-symbols-outlined text-xl">cell_tower</span></div><div><span class="text-base font-headline font-bold tracking-wider uppercase text-on-surface block leading-tight">WAP Manager</span><span class="text-[10px] uppercase font-mono tracking-widest text-primary/80">Enterprise Telco</span></div></div><div class="px-4 mb-3"><span class="text-[10px] font-semibold uppercase tracking-wider text-on-surface-variant/70 px-3">Navigation</span></div><nav class="flex-1 px-3 space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_15px_rgba(125,211,252,0.12)]"><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Dashboard</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-all" data-path="markets" href="#"><span class="material-symbols-outlined text-[20px]">public</span>Markets</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-all" data-path="vendors" href="#"><span class="material-symbols-outlined text-[20px]">lan</span>Vendors</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-all" data-path="flow-canvas" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span>Flow Canvas</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-all" data-path="campaign-logs" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Campaign Logs</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-all" data-path="postbacks-and-s2s" href="#"><span class="material-symbols-outlined text-[20px]">sync_alt</span>Postbacks &amp; S2S</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-all" data-path="affiliates-and-payouts" href="#"><span class="material-symbols-outlined text-[20px]">payments</span>Affiliates &amp; Payouts</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-all" data-path="fraud-and-rules-engine" href="#"><span class="material-symbols-outlined text-[20px]">gshield</span>Fraud &amp; Rules Engine</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-all" data-path="settings-and-api-keys" href="#"><span class="material-symbols-outlined text-[20px]">key</span>Settings &amp; API Keys</a></nav><div class="px-4 pt-4 border-t border-primary/10"><div class="bg-surface/60 backdrop-blur-md rounded-lg p-3 border border-primary/10 flex items-center justify-between"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="text-xs font-mono text-on-surface-variant">MSISDN Gateway</span></div><span class="text-[11px] font-mono text-primary bg-primary/10 px-1.5 py-0.5 rounded">99.98%</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-dim/75 backdrop-blur-2xl border-b border-primary/10 z-40 flex items-center justify-between px-8 shadow-[0_1px_16px_rgba(0,0,0,0.2)]"><div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant"><span class="text-on-surface-variant/70">TELCO_CORE</span><span class="material-symbols-outlined text-xs text-outline">chevron_right</span><span class="text-primary font-medium tracking-wide uppercase">Live Cluster 04-A</span></div><div class="flex items-center gap-5"><div class="hidden md:flex items-center gap-6 px-3.5 py-1.5 bg-surface/60 backdrop-blur-md rounded-full border border-primary/10 text-xs"><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="text-on-surface-variant">Traffic</span><span class="font-mono font-medium text-on-surface">42.8k req/s</span></div><div class="w-px h-3 bg-outline-variant"></div><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="text-on-surface-variant">S2S Latency</span><span class="font-mono font-medium text-on-surface">14ms</span></div><div class="w-px h-3 bg-outline-variant"></div><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="text-on-surface-variant">MO/MT Ratio</span><span class="font-mono font-medium text-on-surface">98.4%</span></div></div><div class="flex items-center gap-3 border-l border-primary/10 pl-5"><button class="w-8 h-8 rounded-lg bg-surface-variant/60 hover:bg-surface-bright border border-primary/10 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span></button><button class="w-8 h-8 rounded-lg bg-surface-variant/60 hover:bg-surface-bright border border-primary/10 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[18px]">help_outline</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(125,211,252,0.3)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 pt-16 w-full px-8 bg-background relative"><div class="flex flex-col w-full pb-16 space-y-8">
+<!-- Dynamic Atmospheric Glow Orbs -->
+<div class="relative w-full">
+<div class="absolute -top-16 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-24 right-10 w-80 h-80 bg-tertiary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header Section -->
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-end justify-between gap-6 pb-2">
+<div class="space-y-2 max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-bright/60 backdrop-blur-md border border-primary/20 text-xs font-mono text-primary shadow-[0_0_15px_rgba(125,211,252,0.1)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          NETWORK ID // 0x4821_AFF_HUB
+          <span class="text-on-surface-variant/40">|</span>
+<span>NET-15 SYNC: ACTIVE</span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-headline font-bold tracking-tight text-on-surface">
+          Affiliate &amp; Partner Portal
+        </h1>
+<p class="text-sm lg:text-base text-on-surface-variant leading-relaxed">
+          Sub-affiliate hierarchy, dynamic token generation, postback attribution mapping &amp; automated payout ledger.
+        </p>
+</div>
+<!-- Header Action Bar -->
+<div class="flex flex-wrap items-center gap-3">
+<!-- Date Range Filter -->
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-dim/70 backdrop-blur-xl border border-primary/15 text-xs text-on-surface hover:border-primary/30 transition-all cursor-pointer shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_month</span>
+<span class="font-medium">Last 30 Days</span>
+<span class="text-on-surface-variant font-mono text-[10px]">(May 1 - May 30)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+<!-- Bulk Export Trigger -->
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-bright/50 hover:bg-surface-bright/80 backdrop-blur-xl border border-primary/15 text-xs font-medium text-on-surface transition-all hover:shadow-[0_0_15px_rgba(125,211,252,0.08)]">
+<span class="material-symbols-outlined text-[17px] text-primary">sim_card_download</span>
+<span>Bulk Token Export</span>
+</button>
+<!-- Batch Payout Trigger Button -->
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary-container/70 hover:bg-secondary-container backdrop-blur-xl border border-primary/25 text-xs font-semibold text-primary transition-all shadow-[0_0_20px_rgba(125,211,252,0.12)]">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Payout Batch ($64,280.00)</span>
+</button>
+<!-- Primary CTA: Onboard -->
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-on-primary text-xs font-semibold hover:bg-primary-fixed shadow-[0_0_25px_rgba(125,211,252,0.35)] transition-all">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>+ Onboard New Affiliate</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Key Metrics Row (4 Glass Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+<!-- Metric 1 -->
+<div class="relative group rounded-xl bg-surface-dim/60 backdrop-blur-xl border border-primary/15 p-5 shadow-[0_0_20px_rgba(125,211,252,0.04)] hover:border-primary/30 transition-all">
+<div class="flex items-start justify-between">
+<span class="text-xs uppercase tracking-wider font-mono text-on-surface-variant">Active Affiliates</span>
+<div class="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">supervised_user_circle</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-3xl font-bold font-headline tracking-tight text-on-surface">148</span>
+<span class="text-xs font-mono text-primary font-medium">Partners</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-xs text-on-surface-variant border-t border-primary/10 pt-3">
+<span class="inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          12 Pending KYC
+        </span>
+<span class="font-mono text-primary bg-primary/10 px-2 py-0.5 rounded text-[11px]">91.8% Active</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="relative group rounded-xl bg-surface-dim/60 backdrop-blur-xl border border-primary/15 p-5 shadow-[0_0_20px_rgba(125,211,252,0.04)] hover:border-primary/30 transition-all">
+<div class="flex items-start justify-between">
+<span class="text-xs uppercase tracking-wider font-mono text-on-surface-variant">Gross Conv. Volume</span>
+<div class="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">show_chart</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-3xl font-bold font-headline tracking-tight text-on-surface">$482,910.40</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-xs text-on-surface-variant border-t border-primary/10 pt-3">
+<span class="inline-flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+          +14.2% MoM
+        </span>
+<span class="font-mono text-on-surface-variant/80 text-[11px]">DCB + MO Subs</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="relative group rounded-xl bg-surface-dim/60 backdrop-blur-xl border border-primary/15 p-5 shadow-[0_0_20px_rgba(125,211,252,0.04)] hover:border-primary/30 transition-all">
+<div class="flex items-start justify-between">
+<span class="text-xs uppercase tracking-wider font-mono text-on-surface-variant">Pending Payout Pool</span>
+<div class="w-8 h-8 rounded-lg bg-tertiary/10 border border-tertiary/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-3xl font-bold font-headline tracking-tight text-on-surface">$64,280.00</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-xs text-on-surface-variant border-t border-primary/10 pt-3">
+<span class="inline-flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+          Due in 3 days
+        </span>
+<span class="font-mono text-tertiary bg-tertiary-container/30 px-2 py-0.5 rounded text-[11px]">Net-15 Cycle</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="relative group rounded-xl bg-surface-dim/60 backdrop-blur-xl border border-primary/15 p-5 shadow-[0_0_20px_rgba(125,211,252,0.04)] hover:border-primary/30 transition-all">
+<div class="flex items-start justify-between">
+<span class="text-xs uppercase tracking-wider font-mono text-on-surface-variant">Avg EPC &amp; Retention</span>
+<div class="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">token</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-3xl font-bold font-headline tracking-tight text-on-surface">$0.48</span>
+<span class="text-xs font-mono text-on-surface-variant">Avg EPC</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-xs text-on-surface-variant border-t border-primary/10 pt-3">
+<span class="text-on-surface-variant">2nd-Cycle Rebill</span>
+<span class="font-mono text-primary bg-primary/10 px-2 py-0.5 rounded text-[11px] font-medium">78.4% Rate</span>
+</div>
+</div>
+</div>
+<!-- Main Workspace Two-Column Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Wider (8 cols) -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Sub-Affiliate Token & Link Matrix Card -->
+<div class="rounded-xl bg-surface-dim/75 backdrop-blur-2xl border border-primary/20 p-6 shadow-[0_0_30px_rgba(125,211,252,0.05)] relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Card Header -->
+<div class="flex flex-wrap items-center justify-between gap-4 pb-5 border-b border-primary/10">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-primary/10 border border-primary/25 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">hub</span>
+</div>
+<div>
+<h2 class="text-base font-headline font-semibold text-on-surface">Sub-Affiliate Token &amp; Link Matrix</h2>
+<p class="text-xs text-on-surface-variant font-mono">Dynamic macros, deterministic signature &amp; S2S endpoint config</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 border border-primary/30 text-[11px] font-mono text-primary shadow-[0_0_10px_rgba(125,211,252,0.15)]">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>
+              Ed25519 Signed
+            </span>
+</div>
+</div>
+<!-- Interactive Form Matrix -->
+<div class="mt-6 space-y-5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Affiliate Partner Dropdown -->
+<div class="space-y-1.5">
+<label class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant">Affiliate Partner</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container/70 border border-primary/20 rounded-lg px-3.5 py-2.5 text-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/40 font-mono transition-all pr-9 cursor-pointer">
+<option selected="">PropellerAds Global (aff_4912 - VIP)</option>
+<option>Adsterra Media (aff_3811 - VIP)</option>
+<option>GoldenMob MENA (aff_2901 - Tier 2)</option>
+<option>ClickForce Direct (aff_1044 - Tier 3)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-2.5 text-on-surface-variant text-[18px]">unfold_more</span>
+</div>
+</div>
+<!-- Offer / Telco Route Dropdown -->
+<div class="space-y-1.5">
+<label class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant">Telco Campaign Offer</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container/70 border border-primary/20 rounded-lg px-3.5 py-2.5 text-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/40 font-mono transition-all pr-9 cursor-pointer">
+<option selected="">SA STC 1-Click Games Hub (CPA $3.80)</option>
+<option>KW Zain StreamBox Video pass (CPA $4.20)</option>
+<option>UAE Etisalat Cloud Arcade (CPA $5.10)</option>
+<option>EG Vodafone Turbo Clean MO (CPA $1.15)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-2.5 text-on-surface-variant text-[18px]">unfold_more</span>
+</div>
+</div>
+</div>
+<!-- Dynamic Sub-ID parameter allocation badges -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant">Dynamic Sub-ID Parameter Allocation</span>
+<span class="text-[11px] font-mono text-primary/80">Active Mapping: 5/5</span>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-high/60 border border-primary/20 text-xs font-mono text-on-surface flex items-center gap-1.5 shadow-sm">
+<span class="text-primary font-bold">sub1</span>
+<span class="text-on-surface-variant">→</span>
+<span class="bg-primary/10 text-primary px-1.5 py-0.5 rounded text-[11px]">{clickid}</span>
+</div>
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-high/60 border border-primary/20 text-xs font-mono text-on-surface flex items-center gap-1.5 shadow-sm">
+<span class="text-primary font-bold">sub2</span>
+<span class="text-on-surface-variant">→</span>
+<span class="bg-primary/10 text-primary px-1.5 py-0.5 rounded text-[11px]">{zone_id}</span>
+</div>
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-high/60 border border-primary/20 text-xs font-mono text-on-surface flex items-center gap-1.5 shadow-sm">
+<span class="text-primary font-bold">sub3</span>
+<span class="text-on-surface-variant">→</span>
+<span class="bg-primary/10 text-primary px-1.5 py-0.5 rounded text-[11px]">{source}</span>
+</div>
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-high/60 border border-primary/20 text-xs font-mono text-on-surface flex items-center gap-1.5 shadow-sm">
+<span class="text-primary font-bold">sub4</span>
+<span class="text-on-surface-variant">→</span>
+<span class="bg-primary/10 text-primary px-1.5 py-0.5 rounded text-[11px]">{creative_id}</span>
+</div>
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-high/60 border border-primary/20 text-xs font-mono text-on-surface flex items-center gap-1.5 shadow-sm">
+<span class="text-primary font-bold">sub5</span>
+<span class="text-on-surface-variant">→</span>
+<span class="bg-primary/10 text-primary px-1.5 py-0.5 rounded text-[11px]">{cost}</span>
+</div>
+<button class="px-2 py-1.5 rounded-lg bg-surface-bright border border-dashed border-primary/30 text-xs font-mono text-primary hover:bg-primary/10 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add</span> Add Sub-ID
+              </button>
+</div>
+</div>
+<!-- Affiliate S2S Server Postback URL input with token macros -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<label class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant">Affiliate S2S Server Postback Endpoint</label>
+<div class="flex items-center gap-1.5 text-[11px] font-mono text-tertiary">
+<span class="material-symbols-outlined text-[13px]">lock_reset</span>
+<span>Payload: GET / HTTPS</span>
+</div>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest/80 border border-primary/20 rounded-lg px-3.5 py-2.5 text-xs text-on-surface font-mono tracking-wide focus:outline-none focus:border-primary/50 select-all shadow-inner" readonly="" type="text" value="https://engine.propellerads.com/pb?click_id={click_id}&amp;payout={payout}&amp;tx={tx_hash}&amp;opr={operator_id}&amp;cur={currency}"/>
+</div>
+<!-- Token Macros Pill Palette -->
+<div class="flex flex-wrap items-center gap-1.5 pt-1">
+<span class="text-[10px] uppercase font-mono text-on-surface-variant mr-1">Available Token Macros:</span>
+<button class="px-2 py-0.5 rounded bg-surface-bright/70 hover:bg-primary/20 border border-primary/20 text-[10px] font-mono text-primary transition-all">{click_id}</button>
+<button class="px-2 py-0.5 rounded bg-surface-bright/70 hover:bg-primary/20 border border-primary/20 text-[10px] font-mono text-primary transition-all">{payout}</button>
+<button class="px-2 py-0.5 rounded bg-surface-bright/70 hover:bg-primary/20 border border-primary/20 text-[10px] font-mono text-primary transition-all">{currency}</button>
+<button class="px-2 py-0.5 rounded bg-surface-bright/70 hover:bg-primary/20 border border-primary/20 text-[10px] font-mono text-primary transition-all">{tx_hash}</button>
+<button class="px-2 py-0.5 rounded bg-surface-bright/70 hover:bg-primary/20 border border-primary/20 text-[10px] font-mono text-tertiary transition-all">{msisdn_hash}</button>
+<button class="px-2 py-0.5 rounded bg-surface-bright/70 hover:bg-primary/20 border border-primary/20 text-[10px] font-mono text-primary transition-all">{operator_id}</button>
+</div>
+</div>
+<!-- Active production tracking endpoint box -->
+<div class="p-3.5 rounded-lg bg-surface-container/90 border border-primary/30 space-y-2 shadow-[0_0_20px_rgba(125,211,252,0.06)]">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-mono text-primary font-semibold text-[11px] uppercase tracking-wider">Live Production Click Link</span>
+</div>
+<span class="text-[10px] font-mono text-on-surface-variant">TTL: 90 Days • Geo-DNS: Edge-Cast</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex-1 bg-surface-dim/90 border border-primary/10 rounded px-3 py-2 text-xs font-mono text-on-surface truncate">
+                https://clk.telcogw.net/v2/trk?aff=4912&amp;off=982&amp;sub1=[ZONE]&amp;sub2=[CLICK]&amp;sig=e7f918b9c2409f82
+              </div>
+<button class="px-3 py-2 rounded bg-primary/15 hover:bg-primary/25 border border-primary/30 text-xs font-medium text-primary flex items-center gap-1.5 transition-all" id="copyLinkBtn" onclick="navigator.clipboard?.writeText('https://clk.telcogw.net/v2/trk?aff=4912&amp;off=982&amp;sub1=[ZONE]&amp;sub2=[CLICK]&amp;sig=e7f918b9c2409f82'); const orig = this.innerHTML; this.innerHTML='&lt;span class=\'material-symbols-outlined text-[15px]\'&gt;check&lt;/span&gt; Copied'; setTimeout(() =&gt; this.innerHTML = orig, 1800);">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+<span>Copy Link</span>
+</button>
+<button class="px-3 py-2 rounded bg-surface-bright hover:bg-surface-bright/80 border border-primary/20 text-xs font-medium text-on-surface flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[15px] text-tertiary">bolt</span>
+<span>Test Ping</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Affiliate Performance & Postback Matrix Table Card -->
+<div class="rounded-xl bg-surface-dim/75 backdrop-blur-2xl border border-primary/15 overflow-hidden shadow-[0_0_30px_rgba(125,211,252,0.03)]">
+<!-- Table Header and Filters -->
+<div class="p-5 border-b border-primary/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">table_chart</span>
+<div>
+<h3 class="text-base font-headline font-semibold text-on-surface">Affiliate Performance &amp; Postback Matrix</h3>
+<p class="text-xs text-on-surface-variant">Real-time S2S attribution throughput and verified revenue</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<!-- Search Input -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-on-surface-variant text-[16px]">search</span>
+<input class="bg-surface-container/70 border border-primary/15 rounded-lg pl-8 pr-3 py-1.5 text-xs text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-primary/40 font-mono w-56 transition-all" placeholder="Search partner, ID or hash..." type="text"/>
+</div>
+<!-- Filter Status Dropdown -->
+<button class="px-3 py-1.5 rounded-lg bg-surface-container/70 border border-primary/15 text-xs text-on-surface flex items-center gap-1.5 hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined text-[15px] text-primary">filter_list</span>
+<span>All Tiers</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse text-xs">
+<thead>
+<tr class="bg-surface-container-high/40 text-on-surface-variant font-mono text-[11px] uppercase tracking-wider border-b border-primary/10">
+<th class="py-3 px-5">Affiliate / Partner</th>
+<th class="py-3 px-4">Contract Tier</th>
+<th class="py-3 px-4">Live Offers</th>
+<th class="py-3 px-4">Traffic (Clicks)</th>
+<th class="py-3 px-4">Conversions (CR%)</th>
+<th class="py-3 px-5 text-right">Volume ($)</th>
+<th class="py-3 px-4 text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<!-- Row 1: PropellerAds Direct -->
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="py-3.5 px-5">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-primary/15 border border-primary/30 flex items-center justify-center font-bold text-primary font-mono text-xs">
+                      PA
+                    </div>
+<div>
+<div class="font-medium text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">
+                        PropellerAds Direct
+                        <span class="material-symbols-outlined text-primary text-[14px]" title="API Verified">verified</span>
+</div>
+<div class="text-[10px] font-mono text-on-surface-variant">aff_4912 • EUR/USD/USDC</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/30 font-mono text-[10px] font-medium shadow-[0_0_8px_rgba(125,211,252,0.2)]">
+                    Tier 1 VIP
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-mono text-on-surface">14 Live</td>
+<td class="py-3.5 px-4 font-mono text-on-surface">1,240,900</td>
+<td class="py-3.5 px-4">
+<div class="font-mono text-on-surface">48,210</div>
+<div class="text-[10px] font-mono text-primary">CR 3.88%</div>
+</td>
+<td class="py-3.5 px-5 text-right font-mono font-semibold text-on-surface">
+                  $183,198.00
+                </td>
+<td class="py-3.5 px-4 text-center">
+<button class="p-1.5 rounded hover:bg-surface-bright text-on-surface-variant hover:text-primary transition-colors" title="Manage Config">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Adsterra Media -->
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="py-3.5 px-5">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-tertiary/15 border border-tertiary/30 flex items-center justify-center font-bold text-tertiary font-mono text-xs">
+                      AM
+                    </div>
+<div>
+<div class="font-medium text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">
+                        Adsterra Media
+                        <span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+</div>
+<div class="text-[10px] font-mono text-on-surface-variant">aff_3811 • Wire / Net-7</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/30 font-mono text-[10px] font-medium shadow-[0_0_8px_rgba(125,211,252,0.2)]">
+                    Tier 1 VIP
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-mono text-on-surface">9 Live</td>
+<td class="py-3.5 px-4 font-mono text-on-surface">890,400</td>
+<td class="py-3.5 px-4">
+<div class="font-mono text-on-surface">31,450</div>
+<div class="text-[10px] font-mono text-primary">CR 3.53%</div>
+</td>
+<td class="py-3.5 px-5 text-right font-mono font-semibold text-on-surface">
+                  $119,510.00
+                </td>
+<td class="py-3.5 px-4 text-center">
+<button class="p-1.5 rounded hover:bg-surface-bright text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: GoldenMob MENA -->
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="py-3.5 px-5">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-secondary-container/60 border border-secondary/30 flex items-center justify-center font-bold text-secondary font-mono text-xs">
+                      GM
+                    </div>
+<div>
+<div class="font-medium text-on-surface group-hover:text-primary transition-colors">
+                        GoldenMob MENA
+                      </div>
+<div class="text-[10px] font-mono text-on-surface-variant">aff_2901 • SEPA Instant</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/50 text-secondary border border-secondary/30 font-mono text-[10px] font-medium">
+                    Tier 2 Net-15
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-mono text-on-surface">6 Live</td>
+<td class="py-3.5 px-4 font-mono text-on-surface">420,100</td>
+<td class="py-3.5 px-4">
+<div class="font-mono text-on-surface">14,800</div>
+<div class="text-[10px] font-mono text-primary">CR 3.52%</div>
+</td>
+<td class="py-3.5 px-5 text-right font-mono font-semibold text-on-surface">
+                  $56,240.00
+                </td>
+<td class="py-3.5 px-4 text-center">
+<button class="p-1.5 rounded hover:bg-surface-bright text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: ClickForce Media -->
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="py-3.5 px-5">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-surface-container-highest border border-outline/30 flex items-center justify-center font-bold text-on-surface-variant font-mono text-xs">
+                      CF
+                    </div>
+<div>
+<div class="font-medium text-on-surface group-hover:text-primary transition-colors">
+                        ClickForce Media
+                      </div>
+<div class="text-[10px] font-mono text-on-surface-variant">aff_1044 • Wire SWIFT</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-bright text-on-surface-variant border border-outline/30 font-mono text-[10px]">
+                    Tier 3 Net-30
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-mono text-on-surface">3 Live</td>
+<td class="py-3.5 px-4 font-mono text-on-surface">185,200</td>
+<td class="py-3.5 px-4">
+<div class="font-mono text-on-surface">5,120</div>
+<div class="text-[10px] font-mono text-secondary">CR 2.76%</div>
+</td>
+<td class="py-3.5 px-5 text-right font-mono font-semibold text-on-surface">
+                  $19,456.00
+                </td>
+<td class="py-3.5 px-4 text-center">
+<button class="p-1.5 rounded hover:bg-surface-bright text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-4 border-t border-primary/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant font-mono">
+<div>Showing 1 to 4 of 148 registered partners</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1 rounded bg-surface-container border border-primary/10 hover:border-primary/30 text-on-surface disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[14px]">chevron_left</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-bold shadow-sm">1</button>
+<button class="px-2.5 py-1 rounded bg-surface-container border border-primary/10 hover:border-primary/30 text-on-surface">2</button>
+<button class="px-2.5 py-1 rounded bg-surface-container border border-primary/10 hover:border-primary/30 text-on-surface">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="px-2.5 py-1 rounded bg-surface-container border border-primary/10 hover:border-primary/30 text-on-surface">37</button>
+<button class="px-2.5 py-1 rounded bg-surface-container border border-primary/10 hover:border-primary/30 text-on-surface">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Settlement & Automated Rules (4 cols) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Settlement Queue Card -->
+<div class="rounded-xl bg-surface-dim/75 backdrop-blur-2xl border border-primary/20 p-5 shadow-[0_0_30px_rgba(125,211,252,0.06)] relative">
+<div class="flex items-center justify-between pb-4 border-b border-primary/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">payments</span>
+<h3 class="text-sm font-headline font-semibold text-on-surface">Settlement Queue</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary border border-tertiary/25 font-mono text-[10px]">
+            Cycle: 2025-W12
+          </span>
+</div>
+<!-- Upcoming Batch Total -->
+<div class="mt-4 space-y-2">
+<div class="flex items-baseline justify-between">
+<span class="text-xs font-mono uppercase text-on-surface-variant">Upcoming Batch Total</span>
+<span class="text-xs font-mono text-primary font-semibold">Net-15 Due</span>
+</div>
+<div class="text-2xl font-bold font-headline text-on-surface tracking-tight">
+            $64,280.00
+          </div>
+<!-- Progress / Escrow Lock Bar -->
+<div class="space-y-1 pt-1">
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden flex">
+<div class="bg-primary h-full rounded-l-full shadow-[0_0_10px_rgba(125,211,252,0.5)]" style="width: 60%"></div>
+<div class="bg-secondary h-full" style="width: 28%"></div>
+<div class="bg-tertiary h-full rounded-r-full" style="width: 12%"></div>
+</div>
+<div class="flex items-center justify-between text-[10px] font-mono text-on-surface-variant pt-0.5">
+<span>60% USDC</span>
+<span>28% SEPA</span>
+<span>12% SWIFT</span>
+</div>
+</div>
+</div>
+<!-- Payment Rails Breakdown -->
+<div class="mt-5 space-y-2.5">
+<span class="text-[11px] font-mono uppercase tracking-wider text-on-surface-variant block">Settlement Rails</span>
+<!-- Rail 1: Crypto -->
+<div class="p-2.5 rounded-lg bg-surface-container/60 border border-primary/10 flex items-center justify-between hover:border-primary/25 transition-all">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center font-mono text-[11px] font-bold">
+                ₮
+              </div>
+<div>
+<div class="text-xs font-medium text-on-surface">USDC / USDT (ERC/TRC)</div>
+<div class="text-[10px] font-mono text-primary">0% gas fee batch • Multi-sig</div>
+</div>
+</div>
+<span class="text-xs font-mono font-semibold text-on-surface">$38,500.00</span>
+</div>
+<!-- Rail 2: SEPA -->
+<div class="p-2.5 rounded-lg bg-surface-container/60 border border-primary/10 flex items-center justify-between hover:border-primary/25 transition-all">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-mono text-[11px] font-bold">
+                €
+              </div>
+<div>
+<div class="text-xs font-medium text-on-surface">SEPA Instant Clearing</div>
+<div class="text-[10px] font-mono text-on-surface-variant">T+0 European IBAN</div>
+</div>
+</div>
+<span class="text-xs font-mono font-semibold text-on-surface">€18,400.00</span>
+</div>
+<!-- Rail 3: SWIFT Wire -->
+<div class="p-2.5 rounded-lg bg-surface-container/60 border border-primary/10 flex items-center justify-between hover:border-primary/25 transition-all">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-tertiary-container/60 text-tertiary flex items-center justify-center font-mono text-[11px] font-bold">
+                $
+              </div>
+<div>
+<div class="text-xs font-medium text-on-surface">SWIFT Wire Transfer</div>
+<div class="text-[10px] font-mono text-on-surface-variant">Cross-border USD</div>
+</div>
+</div>
+<span class="text-xs font-mono font-semibold text-on-surface">$5,908.00</span>
+</div>
+</div>
+<!-- Recent Ledger Logs List -->
+<div class="mt-5 space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-mono uppercase tracking-wider text-on-surface-variant">Recent Ledger Logs</span>
+<span class="text-[10px] font-mono text-primary cursor-pointer hover:underline">View All (42)</span>
+</div>
+<div class="space-y-2">
+<!-- Log 1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low/80 border border-primary/10 flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<div>
+<div class="font-medium text-on-surface">PropellerAds</div>
+<div class="text-[10px] font-mono text-on-surface-variant">USDC • 0x82f...c31b</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-mono text-on-surface font-semibold">$45,000.00</div>
+<div class="text-[10px] font-mono text-primary">Settled</div>
+</div>
+</div>
+<!-- Log 2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low/80 border border-primary/10 flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<div>
+<div class="font-medium text-on-surface">Adsterra Media</div>
+<div class="text-[10px] font-mono text-on-surface-variant">Wire • Barclays NYC</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-mono text-on-surface font-semibold">$32,150.00</div>
+<div class="text-[10px] font-mono text-primary">Completed</div>
+</div>
+</div>
+<!-- Log 3 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low/80 border border-primary/10 flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">sync</span>
+<div>
+<div class="font-medium text-on-surface">Mobidea Global</div>
+<div class="text-[10px] font-mono text-on-surface-variant">SEPA • BNP Paribas</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-mono text-on-surface font-semibold">$14,200.00</div>
+<div class="text-[10px] font-mono text-secondary">Processing</div>
+</div>
+</div>
+<!-- Log 4 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low/80 border border-error/20 flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[16px]">pause_circle</span>
+<div>
+<div class="font-medium text-on-surface">ClickTech Global</div>
+<div class="text-[10px] font-mono text-error">W-8BEN Pending</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-mono text-on-surface font-semibold">$8,400.00</div>
+<div class="text-[10px] font-mono text-error">Held</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Auto-Settlement Engine Rules Glass Card -->
+<div class="rounded-xl bg-surface-dim/75 backdrop-blur-2xl border border-primary/20 p-5 shadow-[0_0_30px_rgba(125,211,252,0.06)] space-y-4">
+<div class="flex items-center gap-2 pb-3 border-b border-primary/10">
+<div class="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">gavel</span>
+</div>
+<div>
+<h3 class="text-sm font-headline font-semibold text-on-surface">Auto-Settlement Engine Rules</h3>
+<p class="text-[11px] text-on-surface-variant font-mono">Consensus triggers &amp; anti-drain safety</p>
+</div>
+</div>
+<div class="space-y-3.5">
+<!-- Rule 1: Anti-Fraud Freeze -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container/60 border border-primary/10">
+<div class="space-y-0.5 max-w-[210px]">
+<div class="text-xs font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Anti-Fraud Auto Freeze
+              </div>
+<div class="text-[11px] text-on-surface-variant font-mono leading-tight">
+                Halts payout if bot rate &gt; 5.0% on 3G/4G MSISDN headers
+              </div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-bright peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-dim after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:border-surface-bright after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary shadow-sm"></div>
+</label>
+</div>
+<!-- Rule 2: Minimum Threshold -->
+<div class="p-3 rounded-lg bg-surface-container/60 border border-primary/10 space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface">Min Payout Threshold</span>
+<span class="text-xs font-mono font-bold text-primary">$500.00</span>
+</div>
+<div class="flex items-center gap-2">
+<input class="w-full accent-primary h-1.5 bg-surface-bright rounded-lg cursor-pointer" max="2500" min="100" step="50" type="range" value="500"/>
+</div>
+<div class="flex justify-between text-[10px] font-mono text-on-surface-variant">
+<span>$100 (Micro)</span>
+<span>$500 (Standard)</span>
+<span>$2,500 (Enterprise)</span>
+</div>
+</div>
+<!-- Rule 3: Smart Contract Timelock -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container/60 border border-primary/10">
+<div class="space-y-0.5 max-w-[210px]">
+<div class="text-xs font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Smart Contract Escrow
+              </div>
+<div class="text-[11px] text-on-surface-variant font-mono leading-tight">
+                Multi-sig timelock Net-7 delay on first-month tier accounts
+              </div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-bright peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-dim after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:border-surface-bright after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary shadow-sm"></div>
+</label>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-bright/80 hover:bg-surface-bright border border-primary/20 text-xs font-mono font-medium text-primary hover:text-on-surface transition-all flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Commit Settlement Policies</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

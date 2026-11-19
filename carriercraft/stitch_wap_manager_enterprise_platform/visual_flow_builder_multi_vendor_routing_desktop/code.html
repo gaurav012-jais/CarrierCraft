@@ -1,0 +1,804 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed":"#120068","surface-container":"#e9edff","primary-fixed":"#85f8c4","error-container":"#ffdad6","primary-fixed-dim":"#68dba9","on-tertiary-fixed-variant":"#004e61","on-primary-container":"#f5fff7","on-secondary-container":"#fffbff","surface-container-highest":"#d9e2fc","primary":"#006948","on-tertiary-fixed":"#001f28","background":"#f9f9ff","error":"#ba1a1a","on-error":"#ffffff","on-primary-fixed-variant":"#005137","on-secondary-fixed-variant":"#3b2fb3","surface-variant":"#d9e2fc","surface-container-low":"#f1f3ff","primary-container":"#00855d","tertiary-fixed":"#b7eaff","inverse-surface":"#273044","on-error-container":"#93000a","inverse-on-surface":"#edf0ff","outline-variant":"#bccac0","tertiary-fixed-dim":"#6cd3f7","surface-container-high":"#e1e8ff","surface-bright":"#f9f9ff","surface-container-lowest":"#ffffff","tertiary":"#00647c","surface":"#f9f9ff","on-surface":"#121b2e","secondary-fixed-dim":"#c4c0ff","secondary-container":"#6b63e3","on-tertiary-container":"#fafdff","secondary":"#5248c9","tertiary-container":"#007f9d","inverse-primary":"#68dba9","on-tertiary":"#ffffff","on-secondary":"#ffffff","surface-dim":"#d1daf4","on-background":"#121b2e","outline":"#6d7a72","on-primary-fixed":"#002114","surface-tint":"#006c4a","on-primary":"#ffffff","secondary-fixed":"#e3dfff","on-surface-variant":"#3d4a42"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","margin":"2rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1.5rem","space-2xl":"3rem","margin-mobile":"1rem","space-xs":"0.25rem","gutter-mobile":"1rem","space-xl":"2rem"},"fontFamily":{"label-macro":["JetBrains Mono"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"caption-legal":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-code":["JetBrains Mono"],"display-hero-mobile":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"label-macro":["13px",{"lineHeight":"18px","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"caption-legal":["11px",{"lineHeight":"16px","fontWeight":"400"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-code":["11px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"display-hero-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-md border-b border-outline-variant/30 flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">hub</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">WAP Manager</span><span class="px-1.5 py-0.5 rounded text-[10px] font-label-code bg-surface-container-high text-primary font-semibold">CORE</span></div><span class="font-caption-legal text-caption-legal text-on-surface-variant truncate">In Partnership with Zain</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-code text-label-code text-outline uppercase tracking-wider">Node Operations</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="markets" href="#"><span class="material-symbols-outlined text-[20px]">public</span><span class="font-body-md text-body-md">Markets</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="vendors" href="#"><span class="material-symbols-outlined text-[20px]">cell_tower</span><span class="font-body-md text-body-md">Vendors</span></a><a aria-current="page" class="flex items-center gap-space-sm px-3 py-2 rounded-lg transition-colors bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="flow-canvas" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span class="font-body-md text-body-md">Flow Canvas</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="campaign-logs" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Campaign Logs</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="postbacks-and-s2s" href="#"><span class="material-symbols-outlined text-[20px]">sync_alt</span><span class="font-body-md text-body-md">Postbacks &amp; S2S</span></a><div class="my-space-xs border-t border-outline-variant/30"></div><span class="px-3 py-1 font-label-code text-label-code text-outline uppercase tracking-wider">Infrastructure</span><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="user-management" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">User Management</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="redis-cache" href="#"><span class="material-symbols-outlined text-[20px]">memory</span><span class="font-body-md text-body-md">Redis Cache</span></a></nav></div><div class="p-space-md border-t border-outline-variant/30 bg-surface-container-low"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-code text-label-code text-on-surface font-semibold">DCB GATEWAY 01</span></div><span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-code text-label-code">HEALTHY</span></div><div class="mt-1 text-on-surface-variant font-caption-legal text-caption-legal flex justify-between"><span>Throughput: 8,420 TPS</span><span>99.98%</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-md border-b border-outline-variant/30 z-40 px-space-md flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-0 max-w-xl"><nav class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant truncate"><a class="hover:text-primary transition-colors" href="#">Markets</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-primary transition-colors" href="#">India</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-primary transition-colors truncate" href="#">Airtel / xzy</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-primary transition-colors truncate" href="#">Campaign jhh</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="font-label-macro text-label-macro text-on-surface font-semibold truncate">Flow Builder</span></nav></div><div class="flex items-center gap-space-sm shrink-0"><div class="relative hidden xl:flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-64 pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/40 font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search MSISDN, Route ID, Node..." type="text" fdprocessedid="86rg19"></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container border border-outline-variant/30"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-code text-label-code text-on-surface font-semibold uppercase">Production / Live</span></div><div class="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low border border-outline-variant/30"><span class="material-symbols-outlined text-primary text-[16px]">swap_calls</span><span class="font-label-code text-label-code text-on-surface-variant">Carrier:</span><span class="font-label-code text-label-code text-primary font-semibold">UP (8/8)</span></div><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="flex items-center gap-1"><a class="px-2.5 py-1.5 rounded-lg border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface font-label-macro text-label-macro flex items-center gap-1 transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">account_tree</span><span>Flow Canvas</span></a><a class="px-2.5 py-1.5 rounded-lg border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface font-label-macro text-label-macro flex items-center gap-1 transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">monitoring</span><span>Vendor Stats</span></a><a class="px-2.5 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-macro text-label-macro font-semibold flex items-center gap-1 transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-[16px]">visibility</span><span>Preview</span></a></div><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="flex items-center gap-2 pl-1"><div class="hidden md:flex flex-col text-right"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Abhinav</span><span class="font-caption-legal text-caption-legal text-on-surface-variant leading-tight">Principal SecOps</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Sub-header Operational Bar (Context, States & Flow Controls) -->
+<div class="px-space-xl py-space-md bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap min-w-0">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors font-body-sm text-body-sm font-semibold" fdprocessedid="rs83d8">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back</span>
+</button>
+<div class="h-5 w-px bg-surface-container-high hidden sm:block"></div>
+<div class="flex items-center gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">jhh</span>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Rename flow configuration" fdprocessedid="r4hy89">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-code font-semibold bg-surface-container-high text-primary tracking-wide uppercase">Campaign Flow</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-label-code font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Active
+        </span>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded-lg">
+<span class="font-body-sm text-body-sm font-medium text-on-surface-variant">Live</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggleLive" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:border-surface-container after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Toolbar action buttons -->
+<div class="hidden lg:flex items-center gap-1 bg-surface-container-low p-1 rounded-xl">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-macro text-label-macro font-semibold shadow-sm flex items-center gap-1.5" fdprocessedid="o023cp">
+<span class="material-symbols-outlined text-[16px]">account_tree</span>
+<span>Flow Canvas</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-macro text-label-macro flex items-center gap-1.5 transition-colors" fdprocessedid="ow1if7">
+<span class="material-symbols-outlined text-[16px]">monitoring</span>
+<span>Vendor Stats</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-macro text-label-macro flex items-center gap-1.5 transition-colors" fdprocessedid="f4wkxi">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+<span>Vendors</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-macro text-label-macro flex items-center gap-1.5 transition-colors" fdprocessedid="b0lhle">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Capping</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-macro text-label-macro flex items-center gap-1.5 transition-colors" fdprocessedid="seyjip">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>API</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-macro text-label-macro flex items-center gap-1.5 transition-colors" fdprocessedid="t1v2b">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>Logs</span>
+</button>
+</div>
+<div class="h-6 w-px bg-surface-container-high hidden lg:block"></div>
+<button class="px-3.5 py-2 rounded-xl bg-surface-container text-on-surface font-label-macro text-label-macro font-semibold hover:bg-surface-container-high transition-colors flex items-center gap-1.5" fdprocessedid="24fsb8">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+<span>Lock Flow</span>
+</button>
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-label-macro text-label-macro font-semibold shadow-md hover:bg-primary-container transition-all flex items-center gap-1.5 active:scale-95" id="saveFlowBtn" fdprocessedid="m9ukr">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Flow</span>
+</button>
+</div>
+</div>
+<div class="px-space-xl py-space-lg flex flex-col gap-space-xl">
+<!-- Title & Operational Concept Note -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-extrabold">Flow builder</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed-dim text-on-primary-fixed-variant font-label-code text-label-code font-bold tracking-wide">
+          Editable Mode
+        </span>
+<span class="hidden md:inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-surface-container font-label-code text-label-code text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">cell_tower</span>
+          Carrier: Bharti Airtel IN (404-45)
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+<span class="font-label-code font-bold text-primary">START</span> configures handshake checks before the initial page (Header Enrichment, IP ASN Blocklist, and Active CheckSub). <span class="font-label-code font-bold text-secondary">END</span> marks direct carrier billing settlement outcomes and asynchronous S2S postbacks.
+      </p>
+</div>
+<!-- Section 1: Verification Mode Grid -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-4 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">Verification mode</h2>
+</div>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">Select billing gateway injection topology</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm" id="modeSelectorGrid">
+<!-- Mode 1 -->
+<div class="mode-card group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col gap-2 relative overflow-hidden" data-mode="he_only">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">Header Injection</span>
+<span class="material-symbols-outlined text-[18px] text-outline opacity-40 group-hover:opacity-100 transition-opacity">wifi_tethering</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Resolve MSISDN from carrier header / ISP enriched tokens, then route directly to HOME. If token missing → hard Error page.
+          </p>
+<div class="pt-1 flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline text-[10px] font-label-code">Zero-SMS</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline text-[10px] font-label-code">Strict 4G/5G</span>
+</div>
+</div>
+<!-- Mode 2 -->
+<div class="mode-card group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col gap-2 relative overflow-hidden" data-mode="otp_only">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">OTP only</span>
+<span class="material-symbols-outlined text-[18px] text-outline opacity-40 group-hover:opacity-100 transition-opacity">sms</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            No landing HE. Direct MSISDN input &amp; 6-digit PIN handshake first, then unlock HOME pack CTAs — or expose public send/verify APIs.
+          </p>
+<div class="pt-1 flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline text-[10px] font-label-code">Wi-Fi friendly</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline text-[10px] font-label-code">2-Factor</span>
+</div>
+</div>
+<!-- Mode 3 (ACTIVE SELECTED) -->
+<div class="mode-card active-mode group p-space-md rounded-xl bg-surface-container-highest shadow-sm transition-all cursor-pointer flex flex-col gap-2 relative overflow-hidden" data-mode="he_otp">
+<div class="absolute top-0 right-0 w-8 h-8 bg-primary rounded-bl-xl flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex items-center justify-between pr-6">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Header Injection + OTP</span>
+<span class="material-symbols-outlined text-[18px] text-primary">auto_fix_high</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed font-medium">
+            HE first. Mobile hit → Instant HOME conversion. Token miss or WiFi routing → Dynamic fallback to OTP PIN prompt → HOME.
+          </p>
+<div class="pt-1 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary text-[10px] font-label-code font-bold">RECOMMENDED</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary text-[10px] font-label-code font-semibold">Max EPC</span>
+</div>
+</div>
+<!-- Mode 4 -->
+<div class="mode-card group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col gap-2 relative overflow-hidden" data-mode="universe_dcb">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">Universe Telecom DCB</span>
+<span class="material-symbols-outlined text-[18px] text-outline opacity-40 group-hover:opacity-100 transition-opacity">bolt</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Full carrier micro-billing WAP funnel with PIN + pack, or direct API endpoint exposing vendor billing token confirmation (headless).
+          </p>
+<div class="pt-1 flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline text-[10px] font-label-code">Aggregator API</span>
+</div>
+</div>
+<!-- Mode 5 -->
+<div class="mode-card group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col gap-2 relative overflow-hidden" data-mode="orange_bf">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">Orange Burkina Faso</span>
+<span class="material-symbols-outlined text-[18px] text-outline opacity-40 group-hover:opacity-100 transition-opacity">public</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Multi-step French VAS flow for Orange BF (+226) with CheckSub auto-forward, authentic carrier OTP dialog &amp; async USSD confirmation.
+          </p>
+<div class="pt-1 flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline text-[10px] font-label-code">Regional Rule</span>
+</div>
+</div>
+<!-- Mode 6 -->
+<div class="mode-card group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col gap-2 relative overflow-hidden" data-mode="null_cg">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">None (null / CG redirect)</span>
+<span class="material-symbols-outlined text-[18px] text-outline opacity-40 group-hover:opacity-100 transition-opacity">alt_route</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            No HE/OTP handled internally. If a Charging Gateway (CG) URL is set → immediate 302 bounce with click_id token injection.
+          </p>
+<div class="pt-1 flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline text-[10px] font-label-code">302 Bypass</span>
+</div>
+</div>
+<!-- Mode 7 -->
+<div class="mode-card group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col gap-2 relative overflow-hidden md:col-span-2" data-mode="cg_via_home">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">CG via HOME (no HE)</span>
+<span class="material-symbols-outlined text-[18px] text-outline opacity-40 group-hover:opacity-100 transition-opacity">shopping_cart_checkout</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            No HE/OTP checks on landing. Render rich promotional HOME landing page first. When subscriber triggers pack selection, seamlessly redirect to telco CG URL with attribution parameters.
+          </p>
+<div class="pt-1 flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline text-[10px] font-label-code">Pre-landing</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline text-[10px] font-label-code">Dynamic CG URL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Post-Resolution Routing + Defaults -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-4 bg-secondary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">After number resolved (HE or OTP)</h2>
+</div>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">Post-identification destination state</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="resolutionBranchSelector">
+<!-- Option A: HOME Page (Selected) -->
+<div class="resolution-card p-space-md rounded-xl bg-surface-container-highest shadow-sm cursor-pointer flex items-start gap-space-md relative overflow-hidden">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">storefront</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">HOME page</span>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-code text-[11px] font-semibold">SELECTED</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+              Render localized gaming portal catalogue with subscription pricing tiers (Weekly ₹49 / Daily ₹10), T&amp;C legalities, and DCB 1-Click conversion triggers.
+            </p>
+</div>
+</div>
+<!-- Option B: Skip HOME -->
+<div class="resolution-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer flex items-start gap-space-md transition-colors">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">fast_forward</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Skip HOME</span>
+<span class="text-caption-legal font-label-code text-outline">Direct Fulfilment</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Number resolved → Instant Thank you page / direct service handoff to member portal (no intervening pack tier selection screen).
+            </p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">info</span>
+          HE miss still gracefully opens OTP first, honoring the selected post-resolution landing outcome.
+        </span>
+<div class="flex items-center gap-space-sm">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-macro text-label-macro font-medium transition-colors" fdprocessedid="iewfmo">
+            Reset layout to default for this mode
+          </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed font-label-macro text-label-macro font-semibold flex items-center gap-1.5 transition-colors shadow-sm" fdprocessedid="cmmz1l">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Reset pages to default</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 3: Multi-Vendor & Multi-Country Routing Rules Engine -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-4 bg-tertiary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">Multi-Country &amp; Vendor Capping Matrix</h2>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">
+            Dynamic load-balancing across traffic sources with automated fraud quarantine and threshold circuit-breakers
+          </p>
+</div>
+<!-- Country Selector Pills -->
+<div class="flex items-center gap-1 p-1 bg-surface-container-low rounded-xl overflow-x-auto max-w-full">
+<button class="px-3 py-1 rounded-lg bg-surface-container-lowest text-primary font-label-code text-label-code font-bold shadow-sm whitespace-nowrap flex items-center gap-1.5" fdprocessedid="a9ubu2">
+<span>🇮🇳</span>
+<span>India (xzy)</span>
+</button>
+<button class="px-3 py-1 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-code text-label-code font-medium whitespace-nowrap flex items-center gap-1.5 transition-colors" fdprocessedid="76k97">
+<span>🇦🇪</span>
+<span>UAE (Etisalat)</span>
+</button>
+<button class="px-3 py-1 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-code text-label-code font-medium whitespace-nowrap flex items-center gap-1.5 transition-colors" fdprocessedid="k48tlb">
+<span>🇸🇦</span>
+<span>KSA (STC)</span>
+</button>
+<button class="px-3 py-1 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-code text-label-code font-medium whitespace-nowrap flex items-center gap-1.5 transition-colors" fdprocessedid="ocb7o8">
+<span>🇸🇸</span>
+<span>South Sudan (Zain)</span>
+</button>
+</div>
+</div>
+<!-- Traffic Splitter Table -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-low p-1">
+<table class="w-full text-left">
+<thead>
+<tr class="font-label-code text-[11px] uppercase tracking-wider text-outline bg-surface-container">
+<th class="py-2.5 px-4 rounded-l-lg">Partner / Vendor</th>
+<th class="py-2.5 px-4">Traffic Split</th>
+<th class="py-2.5 px-4">Daily Cap</th>
+<th class="py-2.5 px-4">Active Route Pipeline</th>
+<th class="py-2.5 px-4">CR (Avg)</th>
+<th class="py-2.5 px-4 rounded-r-lg text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-body-sm text-body-sm text-on-surface">
+<!-- Vendor 1 -->
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-3 px-4 font-semibold flex items-center gap-2.5">
+<div class="w-7 h-7 rounded bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xs">PA</div>
+<div>
+<div class="font-headline-sm text-[13px] leading-tight text-on-surface">PropellerAds</div>
+<div class="font-label-code text-[10px] text-on-surface-variant">VID: #VEN-9014-IN</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-24 bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full" style="width: 60%"></div>
+</div>
+<span class="font-label-code text-label-code font-bold text-primary">60%</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-semibold">3,842 / 5,000 subs</span>
+<span class="font-caption-legal text-caption-legal text-outline">76.8% utilized</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+                  1-Click Direct HE
+                </span>
+</td>
+<td class="py-3 px-4 font-label-code text-label-code font-bold text-primary">14.82%</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-outline hover:text-on-surface transition-colors" title="Configure vendor rules" fdprocessedid="gb9sik">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</td>
+</tr>
+<!-- Vendor 2 -->
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-3 px-4 font-semibold flex items-center gap-2.5">
+<div class="w-7 h-7 rounded bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-xs">AD</div>
+<div>
+<div class="font-headline-sm text-[13px] leading-tight text-on-surface">Adsterra Global</div>
+<div class="font-label-code text-[10px] text-on-surface-variant">VID: #VEN-4328-IN</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-24 bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 30%"></div>
+</div>
+<span class="font-label-code text-label-code font-bold text-secondary">30%</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-semibold">1,120 / 2,500 subs</span>
+<span class="font-caption-legal text-caption-legal text-outline">44.8% utilized</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]">sync_saved_locally</span>
+                  Smart Hybrid (HE → OTP)
+                </span>
+</td>
+<td class="py-3 px-4 font-label-code text-label-code font-bold text-on-surface">9.45%</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-outline hover:text-on-surface transition-colors" title="Configure vendor rules" fdprocessedid="3pn7gj">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</td>
+</tr>
+<!-- Vendor 3 -->
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-3 px-4 font-semibold flex items-center gap-2.5">
+<div class="w-7 h-7 rounded bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-xs">EC</div>
+<div>
+<div class="font-headline-sm text-[13px] leading-tight text-on-surface">ExoClick Direct</div>
+<div class="font-label-code text-[10px] text-on-surface-variant">VID: #VEN-1102-IN</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-24 bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary h-2 rounded-full" style="width: 10%"></div>
+</div>
+<span class="font-label-code text-label-code font-bold text-tertiary">10%</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-semibold">910 / 1,000 subs</span>
+<span class="font-caption-legal text-caption-legal text-error font-medium">91.0% (Near cap limit)</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-code text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]">redo</span>
+                  Direct CG Redirect
+                </span>
+</td>
+<td class="py-3 px-4 font-label-code text-label-code font-bold text-on-surface">6.12%</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-outline hover:text-on-surface transition-colors" title="Configure vendor rules" fdprocessedid="00263e">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Security / Anti-Fraud Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex items-center justify-between gap-space-md flex-wrap">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span>Carrier-Grade Anti-Fraud Protection Enabled</span>
+<span class="px-2 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-[10px] font-bold">AIRTEL SHIELD</span>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+              Suspicious data-center proxies, VPN ASNs, and bot user-agents are auto-quarantined prior to opening billing sockets.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-primary font-bold">1,402 Blocks Today</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-macro text-label-macro font-semibold shadow-sm transition-colors" fdprocessedid="3rkvwb">
+            Audit Logs
+          </button>
+</div>
+</div>
+</div>
+<!-- Section 4: Interactive Visual Flow Canvas & START Inspector -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Flow Graph Visual Diagram Canvas (8 Cols) -->
+<div class="xl:col-span-8 bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between z-10">
+<div class="flex items-center gap-2">
+<span class="w-2 h-4 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">Interactive Canvas preview</h2>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded-xl">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Zoom In" fdprocessedid="jjlgk4">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Zoom Out" fdprocessedid="lt95kk">
+<span class="material-symbols-outlined text-[18px]">zoom_out</span>
+</button>
+<span class="font-label-code text-[11px] text-outline px-1">100%</span>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Recenter Diagram" fdprocessedid="0nvov4">
+<span class="material-symbols-outlined text-[18px]">filter_center_focus</span>
+</button>
+</div>
+</div>
+<!-- Dot Grid Canvas Frame -->
+<div class="w-full min-h-[580px] bg-surface-container-low/60 rounded-xl relative p-6 overflow-x-auto flex flex-col justify-between" style="background-image: radial-gradient(circle, #bccac0 1px, transparent 1px); background-size: 20px 20px;">
+<!-- Layer 1: START Node -->
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-3">
+<div class="px-4 py-2 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm font-extrabold tracking-tight flex items-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+<span>START</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-bold text-on-surface">Landing Interceptor</span>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">Pre-verification checks active</span>
+</div>
+</div>
+<!-- Route Branch Indicators -->
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-highest text-primary font-label-code text-[11px] font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                Route: Dual Handshake
+              </span>
+</div>
+</div>
+<!-- Flow Fork Branches -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-6 relative">
+<!-- Branch 1: High Velocity 1-Click HE Branch -->
+<div class="flex flex-col gap-4 p-4 rounded-xl bg-surface-container-lowest/90 backdrop-blur-sm shadow-sm relative">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-code text-label-code font-bold text-primary">BRANCH A: HE SUCCESS (Mobile ISP)</span>
+</div>
+<span class="text-caption-legal font-label-code text-outline">~68% Traffic</span>
+</div>
+<!-- Node: HOME Landing Page -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">storefront</span>
+<span class="font-headline-sm text-[14px] font-bold text-on-surface">Home Page</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-code text-[10px] hover:bg-surface-container-high flex items-center gap-0.5" fdprocessedid="ghobic">
+<span class="material-symbols-outlined text-[12px]">edit</span> Edit
+                    </button>
+<button class="p-1 text-outline hover:text-error rounded" fdprocessedid="le9zs">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+                  Pack selection: <strong class="text-on-surface">Unlimited Gaming Vault</strong> (Weekly ₹49). Enriched MSISDN displayed in confirmation pill.
+                </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-code text-[10px] text-primary bg-primary-fixed px-1.5 py-0.5 rounded">CTA: 'Subscribe Now'</span>
+<span class="font-caption-legal text-caption-legal text-outline">Render Latency: 120ms</span>
+</div>
+</div>
+<!-- Flow Connection Arrow Down -->
+<div class="flex items-center justify-center -my-2 text-primary font-label-code text-[11px] gap-1">
+<span class="material-symbols-outlined text-[18px]">south</span>
+<span>User clicks CTA</span>
+</div>
+<!-- Node: Direct DCB Charge Gate -->
+<div class="p-3.5 rounded-xl bg-primary-fixed-dim/20 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">credit_score</span>
+<span class="font-headline-sm text-[14px] font-bold text-primary">Carrier DCB Handshake</span>
+</div>
+<span class="font-label-code text-[10px] bg-primary text-on-primary px-1.5 py-0.5 rounded font-bold">1-CLICK</span>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface">
+                  Synchronous Airtel WAP Direct Billing API call. Instant balance debit confirmation.
+                </p>
+</div>
+<!-- Flow Connection Arrow Down -->
+<div class="flex items-center justify-center -my-2 text-primary font-label-code text-[11px] gap-1">
+<span class="material-symbols-outlined text-[18px]">south</span>
+<span>Charge OK</span>
+</div>
+<!-- Node: Thank You + S2S Postback -->
+<div class="p-3.5 rounded-xl bg-surface-container-highest flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<span class="font-headline-sm text-[14px] font-bold text-on-surface">Thank You &amp; Postback</span>
+</div>
+<span class="font-label-code text-[10px] text-secondary font-bold">END S2S</span>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+                  Dispatches async server-to-server postback with payout token to vendor. Direct portal link activated.
+                </p>
+</div>
+</div>
+<!-- Branch 2: Fallback OTP PIN Branch -->
+<div class="flex flex-col gap-4 p-4 rounded-xl bg-surface-container-lowest/90 backdrop-blur-sm shadow-sm relative">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-code text-label-code font-bold text-secondary">BRANCH B: HE MISS (Wi-Fi / ISP 404)</span>
+</div>
+<span class="text-caption-legal font-label-code text-outline">~32% Traffic</span>
+</div>
+<!-- Node: MSISDN Entry -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">dialpad</span>
+<span class="font-headline-sm text-[14px] font-bold text-on-surface">Mobile Number</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-code text-[10px] hover:bg-surface-container-high flex items-center gap-0.5" fdprocessedid="wafkh9">
+<span class="material-symbols-outlined text-[12px]">edit</span> Edit
+                    </button>
+<button class="p-1 text-outline hover:text-error rounded" fdprocessedid="eg0xz1">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+                  Captures 10-digit Indian MSISDN (+91). Country code prefix locked to target campaign geo.
+                </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-code text-[10px] text-secondary bg-secondary-fixed px-1.5 py-0.5 rounded">CTA: 'Get PIN'</span>
+<span class="font-caption-legal text-caption-legal text-outline">SMS Gateway: UP</span>
+</div>
+</div>
+<!-- Flow Connection Arrow Down -->
+<div class="flex items-center justify-center -my-2 text-secondary font-label-code text-[11px] gap-1">
+<span class="material-symbols-outlined text-[18px]">south</span>
+<span>OTP Sent via SMS</span>
+</div>
+<!-- Node: Verify OTP PIN -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">pin</span>
+<span class="font-headline-sm text-[14px] font-bold text-on-surface">Verify OTP</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-code text-[10px] hover:bg-surface-container-high flex items-center gap-0.5" fdprocessedid="phx6hn">
+<span class="material-symbols-outlined text-[12px]">edit</span> Edit
+                    </button>
+<button class="p-1 text-outline hover:text-error rounded" fdprocessedid="rx6icv">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+                  6-digit carrier verification code prompt. Auto-submits on 6th digit input. Resend cooldown: 60s.
+                </p>
+</div>
+<!-- Flow Connection Arrow Down -->
+<div class="flex items-center justify-center -my-2 text-secondary font-label-code text-[11px] gap-1">
+<span class="material-symbols-outlined text-[18px]">south</span>
+<span>PIN Verified</span>
+</div>
+<!-- Node: Success / Portal Access -->
+<div class="p-3.5 rounded-xl bg-surface-container-highest flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">task_alt</span>
+<span class="font-headline-sm text-[14px] font-bold text-on-surface">Subscription Active</span>
+</div>
+<span class="font-label-code text-[10px] text-primary font-bold">END S2S</span>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+                  User billing authorized. Welcome SMS triggered via Airtel SMPP. Redirecting to games catalogue.
+                </p>
+</div>
+</div>
+</div>
+<!-- Canvas Footer Status Banner -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-surface-container-high/60">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 font-label-code text-[11px] text-on-surface font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Canvas Status: Synced
+              </span>
+<span class="font-label-code text-[11px] text-on-surface-variant">
+                Graph Nodes: 6 Active / 0 Orphaned
+              </span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-macro text-[12px] flex items-center gap-1" fdprocessedid="mdbr4p">
+<span class="material-symbols-outlined text-[14px]">add</span> Add Page Node
+              </button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-macro text-[12px] flex items-center gap-1" fdprocessedid="gyd9b">
+<span class="material-symbols-outlined text-[14px]">tune</span> Add Split Fork
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right START Configuration Inspector Panel (4 Cols) -->
+<div class="xl:col-span-4 bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary uppercase font-bold tracking-wider">Node Inspector</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-code text-[10px] font-bold">START NODE</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">Pre-Page Gateway Checks</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            These validation routines execute instantly on subscriber HTTP landing before any graphical template renders. Partner API URLs adapt from Campaign Settings.
+          </p>
+</div>
+<!-- Checkbox Controls Stack -->
+<div class="flex flex-col gap-space-md">
+<!-- Checkbox 1: Header Enrichment -->
+<label class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors group">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox">
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Header enrichment (HE)
+              </span>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+                Resolve MSISDN token from carrier proxy before rendering the first page layout.
+              </p>
+</div>
+</label>
+<!-- Checkbox 2: CheckSub Prior Subscription -->
+<label class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors group">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox">
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">
+                CheckSub: Active Subscription Check
+              </span>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+                Query carrier DCB registry. If subscriber is already billed, auto-forward directly to member portal content.
+              </p>
+</div>
+</label>
+<!-- Checkbox 3: Blocklist & Fraud IP Filter -->
+<label class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors group">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox">
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Blocklist &amp; Bot Defense
+              </span>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+                Screen against global telecom spam lists and non-mobile ISP ASN ranges (Cloudflare, AWS, DigitalOcean).
+              </p>
+</div>
+</label>
+<!-- Checkbox 4: S2S Payout Attribution -->
+<label class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors group">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox">
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Partner Token Pass-through
+              </span>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+                Extract <code class="font-label-code text-[11px] bg-surface-container-highest px-1 py-0.5 rounded text-primary font-bold">click_id</code> and append to conversion callback.
+              </p>
+</div>
+</label>
+<!-- Checkbox 5: Geo-Fencing Enforcement -->
+<label class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors group">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox">
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Strict MCC/MNC Telephony Match
+              </span>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant">
+                Enforce exact Airtel India SIM identity (404-45 / 404-70). Reject roaming subscribers.
+              </p>
+</div>
+</label>
+</div>
+<!-- Latency & Health Indicator -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface font-semibold">Gateway Pre-flight Latency</span>
+<span class="font-label-code text-label-code text-primary font-bold">42ms AVG</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 28%"></div>
+</div>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">
+            Optimization score 98/100. Redis cluster cache active on session pre-resolution.
+          </span>
+</div>
+<!-- Quick Debug Action -->
+<div class="flex items-center gap-2 pt-2">
+<button class="w-full py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-macro text-label-macro font-semibold flex items-center justify-center gap-2 transition-colors" fdprocessedid="7edyf7">
+<span class="material-symbols-outlined text-[18px]">bug_report</span>
+<span>Simulate START Handshake</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Verification Mode Card Selection Behavior
+  const modeCards = document.querySelectorAll('.mode-card');
+  modeCards.forEach(card => {
+    card.addEventListener('click', () => {
+      modeCards.forEach(c => {
+        c.classList.remove('active-mode', 'bg-surface-container-highest');
+        c.classList.add('bg-surface-container-low');
+        const badge = c.querySelector('.mode-badge');
+        if (badge) badge.remove();
+      });
+
+      card.classList.remove('bg-surface-container-low');
+      card.classList.add('active-mode', 'bg-surface-container-highest');
+    });
+  });
+
+  // Post-Resolution Cards Selection
+  const resolutionCards = document.querySelectorAll('.resolution-card');
+  resolutionCards.forEach(card => {
+    card.addEventListener('click', () => {
+      resolutionCards.forEach(c => {
+        c.classList.remove('bg-surface-container-highest');
+        c.classList.add('bg-surface-container-low');
+      });
+      card.classList.remove('bg-surface-container-low');
+      card.classList.add('bg-surface-container-highest');
+    });
+  });
+
+  // Save Flow Button Interactive State Feedback
+  const saveBtn = document.getElementById('saveFlowBtn');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      const origText = saveBtn.innerHTML;
+      saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Saving...</span>';
+      saveBtn.classList.add('opacity-80');
+      
+      setTimeout(() => {
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Saved!</span>';
+        saveBtn.classList.remove('opacity-80');
+        saveBtn.classList.add('bg-primary-container');
+        
+        setTimeout(() => {
+          saveBtn.innerHTML = origText;
+          saveBtn.classList.remove('bg-primary-container');
+        }, 1800);
+      }, 700);
+    });
+  }
+</script><div id="simulationDrawer" class="fixed inset-0 z-50 flex justify-end bg-on-surface/40 backdrop-blur-sm transition-opacity"><div class="w-full max-w-2xl h-full bg-surface-container-lowest shadow-2xl flex flex-col border-l border-outline-variant/30 overflow-hidden relative"><div class="px-6 py-4 bg-surface-container-low border-b border-outline-variant/30 flex items-center justify-between shrink-0"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-on-secondary shadow-sm"><span class="material-symbols-outlined text-[22px]">wifi</span></div><div><div class="flex items-center gap-2"><h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Simulate START Handshake</h3><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold tracking-wider uppercase"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>SIMULATION COMPLETE (WIFI FALLBACK)</span></div><div class="flex items-center gap-2 mt-0.5 font-label-code text-[11px] text-on-surface-variant"><span class="text-secondary font-semibold">WiFi Off-Net / Fallback</span><span>•</span><span>Node XZ12-IN</span><span>•</span><span>Trace #SIM-89102-WIFI</span></div></div></div><button onclick="document.getElementById('simulationDrawer').remove()" class="p-2 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Close Drawer"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="flex-1 overflow-y-auto p-6 flex flex-col gap-5"><div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col gap-3"><div class="flex items-center justify-between border-b border-surface-container-high pb-2"><span class="font-label-code text-[11px] uppercase tracking-wider text-outline font-bold flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">tune</span>Test Simulation Parameters</span><span class="font-label-code text-[11px] px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-semibold">WiFi Fallback / OTP Mode</span></div><div class="grid grid-cols-2 gap-3"><div class="flex flex-col gap-1"><span class="font-caption-legal text-caption-legal text-on-surface-variant">Ingress Mode</span><div class="flex items-center gap-1 bg-surface-container p-0.5 rounded-lg"><button class="flex-1 py-1 px-2 rounded-md text-on-surface-variant hover:text-on-surface font-label-code text-[11px] flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[14px]">signal_cellular_alt</span>Cellular 4G/5G</button><button class="flex-1 py-1 px-2 rounded-md bg-surface-container-lowest text-secondary font-label-code text-[11px] font-bold shadow-sm flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[14px]">wifi</span>WiFi Fallback</button></div></div><div class="flex flex-col gap-1"><span class="font-caption-legal text-caption-legal text-on-surface-variant">Test MSISDN &amp; Token</span><div class="px-2.5 py-1.5 rounded-lg bg-surface-container font-label-code text-[12px] text-on-surface flex items-center justify-between font-semibold"><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[15px]">call</span>+91 98765 43210</span><span class="text-[10px] text-outline font-normal truncate max-w-[90px]" title="Token: x-msisdn-enc-none">No HE Token</span></div></div></div><div class="flex items-center justify-between text-[11px] font-label-code pt-1"><div class="flex items-center gap-1.5"><span class="text-on-surface-variant">Partner Ingress:</span><span class="font-semibold text-secondary">PropellerAds (VID: #VEN-9014-IN)</span></div><div class="flex items-center gap-2"><span class="text-on-surface-variant">Ingress IP:</span><span class="font-semibold text-on-surface truncate max-w-xs" title="103.212.45.89 (ACT Fibernet ASN133982)">103.212.45.89 (ACT Fibernet / ASN133982)</span></div></div><div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-surface-container-high"><div class="p-2 rounded bg-surface-container-lowest flex flex-col gap-0.5 border border-outline-variant/30"><span class="font-caption-legal text-[10px] text-on-surface-variant">HE Check</span><span class="font-label-code text-[11px] font-bold text-outline flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-secondary">warning</span>MISS / BYPASS (0ms)</span></div><div class="p-2 rounded bg-surface-container-lowest flex flex-col gap-0.5 border border-outline-variant/30"><span class="font-caption-legal text-[10px] text-on-surface-variant">CheckSub Active</span><span class="font-label-code text-[11px] font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">check_circle</span>Clean / No Prior Sub</span></div><div class="p-2 rounded bg-surface-container-lowest flex flex-col gap-0.5 border border-outline-variant/30"><span class="font-caption-legal text-[10px] text-on-surface-variant">Blocklist &amp; ASN</span><span class="font-label-code text-[11px] font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">check_circle</span>Residential Clean</span></div><div class="p-2 rounded bg-surface-container-lowest flex flex-col gap-0.5 border border-outline-variant/30"><span class="font-caption-legal text-[10px] text-on-surface-variant">Partner Token</span><span class="font-label-code text-[11px] font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">check_circle</span>click_id Valid</span></div></div></div><div class="flex flex-col gap-3"><div class="flex items-center justify-between"><span class="font-headline-sm text-[13px] uppercase font-bold text-outline tracking-wider flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">account_tree</span>Execution Trace Waterfall</span><span class="font-label-code text-[11px] text-on-surface-variant">Total Pre-Flight: <strong class="text-secondary font-bold">108ms</strong></span></div><div class="space-y-2.5 font-body-sm"><div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-code font-bold text-[11px] shrink-0 mt-0.5">1</div><div class="flex-1 flex flex-col min-w-0"><div class="flex items-center justify-between"><span class="font-headline-sm text-[13px] font-bold text-on-surface">Ingress &amp; IP Resolution</span><span class="font-label-code text-[11px] text-primary font-bold px-1.5 py-0.2 rounded bg-primary-fixed">200 OK • 6ms</span></div><p class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">Resolved subscriber IP: 103.212.45.89 (ACT Fibernet Broadband ASN 133982). Identified as non-carrier Wi-Fi egress.</p></div></div><div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-code font-bold text-[11px] shrink-0 mt-0.5">2</div><div class="flex-1 flex flex-col min-w-0"><div class="flex items-center justify-between"><span class="font-headline-sm text-[13px] font-bold text-on-surface">MSISDN Header Enrichment</span><span class="font-label-code text-[11px] text-outline font-bold px-1.5 py-0.2 rounded bg-surface-container-highest">404 NOT_FOUND • 14ms</span></div><p class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">No x-msisdn-he or Radius token detected on off-net connection. Triggering automated Wi-Fi-to-Cellular Fallback.</p></div></div><div class="p-3 rounded-xl bg-secondary-fixed/30 border border-secondary/30 flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-code font-bold text-[11px] shrink-0 mt-0.5">3</div><div class="flex-1 flex flex-col min-w-0"><div class="flex items-center justify-between"><span class="font-headline-sm text-[13px] font-bold text-secondary">Branch Decision Router: Branch B Triggered!</span><span class="font-label-code text-[11px] text-secondary font-bold px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed">Branch B (OTP)</span></div><p class="font-caption-legal text-caption-legal text-on-surface mt-0.5">Route condition satisfied: HE Miss ➔ Directed to <strong>Branch B: Mobile Number &amp; OTP Verification</strong>. Bypassed 1-Click direct DCB.</p></div></div><div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-code font-bold text-[11px] shrink-0 mt-0.5">4</div><div class="flex-1 flex flex-col min-w-0"><div class="flex items-center justify-between"><span class="font-headline-sm text-[13px] font-bold text-on-surface">OTP Dispatch &amp; SMS Gateway Handshake</span><span class="font-label-code text-[11px] text-secondary font-bold px-1.5 py-0.2 rounded bg-secondary-fixed">200 OK • 88ms</span></div><p class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">Dispatched 4-digit PIN via Telco SMS Gateway (Airtel DL-AIRTEL). Mock OTP: 7492 dispatched to subscriber.</p></div></div></div></div><div class="p-4 rounded-xl bg-secondary-fixed/20 border border-secondary/40 flex flex-col gap-3"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[20px]">sms</span><span class="font-headline-sm text-[14px] font-bold text-secondary uppercase tracking-tight">Fallback Routed — Branch B: 2-Step OTP Verification</span></div><span class="px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-code text-[10px] font-bold">FALLBACK PASS</span></div><div class="grid grid-cols-3 gap-2 pt-1 border-t border-secondary/20"><div class="flex flex-col"><span class="font-caption-legal text-[10px] text-on-surface-variant">Pre-Flight Latency</span><span class="font-label-code text-label-code font-bold text-secondary">108ms <span class="text-[10px] font-normal text-on-surface-variant">(P99 &lt;180ms)</span></span></div><div class="flex flex-col"><span class="font-caption-legal text-[10px] text-on-surface-variant">Projected EPC</span><span class="font-label-code text-label-code font-bold text-on-surface">$0.28 / click</span></div><div class="flex flex-col"><span class="font-caption-legal text-[10px] text-on-surface-variant">Predicted CR</span><span class="font-label-code text-label-code font-bold text-secondary">8.45%</span></div></div><div class="mt-1 p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-code text-[11px] text-on-surface font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-secondary">phone_iphone</span>Subscriber PIN Challenge Preview</span><span class="font-caption-legal text-[10px] text-outline font-label-code">Auto-resend timer: 42s</span></div><div class="flex items-center justify-between gap-2 pt-0.5"><div class="font-label-code text-[12px] text-on-surface font-semibold">Phone: <span class="text-secondary">+91 98765 43210</span></div><div class="flex items-center gap-1.5 font-label-code text-[13px] font-bold"><span class="px-2 py-1 rounded bg-surface-container border border-outline-variant/40 text-on-surface">7</span><span class="px-2 py-1 rounded bg-surface-container border border-outline-variant/40 text-on-surface">4</span><span class="px-2 py-1 rounded bg-surface-container border border-outline-variant/40 text-on-surface">9</span><span class="px-2 py-1 rounded bg-surface-container border border-outline-variant/40 text-on-surface">2</span></div><span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-code text-[10px] font-bold">DISPATCHED</span></div></div></div></div><div class="px-6 py-4 bg-surface-container-low border-t border-outline-variant/30 flex items-center justify-between shrink-0 gap-3"><div class="flex items-center gap-2"><button class="px-3 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-macro text-label-macro font-semibold flex items-center gap-1.5 border border-outline-variant/40 transition-colors" fdprocessedid="bn9wh5"><span class="material-symbols-outlined text-[16px]">terminal</span><span>Inspect Raw Headers</span></button><button class="px-3 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-macro text-label-macro font-semibold flex items-center gap-1.5 border border-outline-variant/40 transition-colors" fdprocessedid="l2g45q"><span class="material-symbols-outlined text-[16px]">bookmark</span><span>Save as Baseline</span></button></div><button class="px-4 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-macro text-label-macro font-semibold flex items-center gap-1.5 shadow-md transition-all active:scale-95" fdprocessedid="9qo3os"><span class="material-symbols-outlined text-[18px]">refresh</span><span>Re-run Simulation</span></button></div></div></div></main></div>
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>

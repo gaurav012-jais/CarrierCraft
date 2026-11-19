@@ -1,25 +1,93 @@
-# 🚀 Rebuild Blueprint: Clean Scratch Development Guide
+# CarrierCraft — Telecom WAP Carrier Billing & Dynamic Subscription Platform
 
-Welcome to the **Master Rebuild Blueprint** for the Telecom WAP Carrier Billing & Dynamic Subscription Funnel Platform.
-
-Yeh documentation specially design ki gayi hai taaki aap is project ko **shuru se (scratch se)** bina kisi confusion ya code-mess ke step-by-step bana sakein.
+Enterprise-grade Telecom WAP billing, subscriber Header Enrichment (HE) detection, dynamic multi-step subscription funnels, and partner attribution platform.
 
 ---
 
-## 📚 Complete Blueprint Table of Contents
+## 📁 Repository Structure
 
-| File | Topic & Scope |
-| :--- | :--- |
-| **[01-PROJECT-OVERVIEW.md](file:///d:/dddd/rebuild-blueprint/01-PROJECT-OVERVIEW.md)** | **Project Ka A-to-Z Overview (Non-Tech Friendly)**<br>Yeh project asal me kya karta hai, Telecom Carrier Billing (DCB) kya hoti hai, aur purani kichdi ko kaise door kiya gaya hai. |
-| **[02-NON-TECH-ARCHITECTURE-AND-CLEAN-CODE.md](file:///d:/dddd/rebuild-blueprint/02-NON-TECH-ARCHITECTURE-AND-CLEAN-CODE.md)** | **Architecture & Clean Code Standards**<br>3 Saaf Layers ka Mental Model, End-to-End Sequence Diagram, aur Strict 150-200 lines per file ka rule. |
-| **[03-BACKEND-SPECIFICATION.md](file:///d:/dddd/rebuild-blueprint/03-BACKEND-SPECIFICATION.md)** | **Backend Architecture & APIs**<br>Express micro-modules, `/detect-msisdn`, `/page`, `/transition` endpoints, Telecom Partner gateway proxy, aur local dev mock mode. |
-| **[04-FRONTEND-SPECIFICATION.md](file:///d:/dddd/rebuild-blueprint/04-FRONTEND-SPECIFICATION.md)** | **Frontend & Master Interactive Figma Prototype Prompt**<br>React/Tailwind/Zustand architecture + **Master Playable Design Prompt** (Figma interactive prototype style: Screen 1 se Screen 7 tak ka working flow). |
-| **[05-DATABASE-SCHEMA.md](file:///d:/dddd/rebuild-blueprint/05-DATABASE-SCHEMA.md)** | **Database Tables, Relations & Indexes**<br>Complete ER diagram, har table ka role, SQL DDL schema, high-traffic indexes, aur dead code cleanup. |
-| **[06-STEP-BY-STEP-BUILD-ROADMAP.md](file:///d:/dddd/rebuild-blueprint/06-STEP-BY-STEP-BUILD-ROADMAP.md)** | **Step-by-Step Build Roadmap & Checklist**<br>Phase 1 se Phase 7 tak ka execution plan aur code commit karne se pehle ka self-review checklist. |
+This repository contains both the **core platform codebase** (`carriercraft/`) and the complete **architectural redirect & verification flow specifications** (`rebuild-blueprint/`):
+
+```
+CarrierCraft/
+├── carriercraft/                               # Full platform source code
+│   ├── backend/                                # Node.js / Express modular API
+│   │   ├── src/
+│   │   │   ├── modules/                        # auth, markets, campaigns, flow, otp, partners, analytics
+│   │   │   ├── database/                       # PostgreSQL schema & connection
+│   │   │   └── server.js                       # Server entry point (port 4000)
+│   │   ├── scripts/                            # DB setup, seeds & smoke tests
+│   │   └── package.json
+│   ├── frontend/                               # React 19 + Vite + Tailwind CSS
+│   │   ├── src/
+│   │   │   ├── components/                     # Layout, campaigns, flow nodes, live preview
+│   │   │   ├── pages/                          # MarketsPage, MarketCampaignsPage, CampaignDetailPage, SubscriptionPage
+│   │   │   └── services/api.js                 # API client
+│   │   └── package.json
+│   └── stitch_wap_manager_enterprise_platform/ # UI prototypes and Stitch assets
+└── rebuild-blueprint/                          # Complete architectural blueprint & flow guides
+    ├── flows/                                  # Detailed operational flow documentation
+    │   ├── 01-MASTER-ARCHITECTURE-AND-CONCEPTUAL-FLOW.md
+    │   ├── 02-ATTRIBUTION-VISIT-LIFECYCLE-AND-POSTBACKS.md
+    │   ├── 03-HE-DETECT-AND-DECISION-MATRIX.md
+    │   ├── 04-VERIFICATION-MODES-AND-FUNNEL-LAYOUTS.md
+    │   ├── 05-CANVAS-EDITOR-AND-BUTTON-INTERACTIONS.md
+    │   ├── 06-PARTNER-APIS-OTP-LIFECYCLE-AND-DCB-BILLING.md
+    │   ├── 07-ADMIN-PORTAL-AND-OPERATION-FLOW.md
+    │   └── INDEX.md
+    └── 01-PROJECT-OVERVIEW.md ... 07-FREE-TECH-STACK.md
+```
 
 ---
 
-## 🎯 Golden Rules For Scratch Rebuild
-1. **Never write a file longer than 200 lines.** Agar lamba hone lage, split into helpers/services/hooks.
-2. **Single Responsibility:** Routes route karenge, Controllers input validate karenge, Services business logic chalayenge, DB sirf data dega.
-3. **No Mixed Sources of Truth:** Campaign flow mode (`BOTH`, `OTP_ONLY`, `HEADER_INJECTION`) Campaign Detail me set hoga, aur Canvas buttons simple standardized actions fire karenge.
+## 🚀 Key Features
+
+1. **Carrier Header Enrichment (HE) & Wi-Fi Fallback**:
+   - Automatic 1-Click subscriber recognition via cellular telco headers (`x-msisdn`, `x-network-info`).
+   - Seamless fallback to SMS OTP verification when browsing on Wi-Fi.
+
+2. **7 Verification Modes**:
+   - `Header Injection`, `OTP only`, `Header Injection + OTP`, `Universe Telecom DCB`, `Orange Burkina Faso`, `None (null / CG redirect)`, and `CG via HOME (no HE)`.
+
+3. **Markets & Carrier Campaigns Management**:
+   - Clean tabular hierarchy for countries and telecom operators (`/markets`).
+   - Deep campaign tracking (`{COUNTRY}-{OPERATOR}-{ID}`).
+   - Tabbed flow builder with live lock/unlock and layout defaults.
+
+4. **Live Funnel Testing & Simulator**:
+   - Live testing URL: `/subscription?country={CC}&operator={OP}&tracking_campid={ID}`.
+   - Built-in interactive mobile drawer in the campaign flow canvas for instant 1-click end-to-end testing.
+
+---
+
+## 🛠️ Quick Start
+
+### 1. Database Setup (PostgreSQL)
+Ensure PostgreSQL is running locally on port `5432`:
+```bash
+cd carriercraft/backend
+cp .env.example .env
+# Edit .env with your DB credentials
+npm install
+node scripts/setup-db.js
+node scripts/seed-wap-markets.js
+```
+
+### 2. Run Backend API
+```bash
+cd carriercraft/backend
+npm run start
+# Running at http://localhost:4000
+```
+
+### 3. Run Frontend
+```bash
+cd carriercraft/frontend
+npm install
+npm run dev
+# Running at http://localhost:5173
+```
+
+Default credentials:
+- **Email**: `abhivishwkarmaa52@gmail.com`
+- **Password**: `123456`

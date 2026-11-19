@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed":"#120068","surface-container":"#e9edff","primary-fixed":"#85f8c4","error-container":"#ffdad6","primary-fixed-dim":"#68dba9","on-tertiary-fixed-variant":"#004e61","on-primary-container":"#f5fff7","on-secondary-container":"#fffbff","surface-container-highest":"#d9e2fc","primary":"#006948","on-tertiary-fixed":"#001f28","background":"#f9f9ff","error":"#ba1a1a","on-error":"#ffffff","on-primary-fixed-variant":"#005137","on-secondary-fixed-variant":"#3b2fb3","surface-variant":"#d9e2fc","surface-container-low":"#f1f3ff","primary-container":"#00855d","tertiary-fixed":"#b7eaff","inverse-surface":"#273044","on-error-container":"#93000a","inverse-on-surface":"#edf0ff","outline-variant":"#bccac0","tertiary-fixed-dim":"#6cd3f7","surface-container-high":"#e1e8ff","surface-bright":"#f9f9ff","surface-container-lowest":"#ffffff","tertiary":"#00647c","surface":"#f9f9ff","on-surface":"#121b2e","secondary-fixed-dim":"#c4c0ff","secondary-container":"#6b63e3","on-tertiary-container":"#fafdff","secondary":"#5248c9","tertiary-container":"#007f9d","inverse-primary":"#68dba9","on-tertiary":"#ffffff","on-secondary":"#ffffff","surface-dim":"#d1daf4","on-background":"#121b2e","outline":"#6d7a72","on-primary-fixed":"#002114","surface-tint":"#006c4a","on-primary":"#ffffff","secondary-fixed":"#e3dfff","on-surface-variant":"#3d4a42"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","margin":"2rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1.5rem","space-2xl":"3rem","margin-mobile":"1rem","space-xs":"0.25rem","gutter-mobile":"1rem","space-xl":"2rem"},"fontFamily":{"label-macro":["JetBrains Mono"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"caption-legal":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-code":["JetBrains Mono"],"display-hero-mobile":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"label-macro":["13px",{"lineHeight":"18px","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"caption-legal":["11px",{"lineHeight":"16px","fontWeight":"400"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-code":["11px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"display-hero-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-md border-b border-outline-variant/30 flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">hub</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">WAP Manager</span><span class="px-1.5 py-0.5 rounded text-[10px] font-label-code bg-surface-container-high text-primary font-semibold">CORE</span></div><span class="font-caption-legal text-caption-legal text-on-surface-variant truncate">In Partnership with Zain</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-code text-label-code text-outline uppercase tracking-wider">Node Operations</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="markets" href="#"><span class="material-symbols-outlined text-[20px]">public</span><span class="font-body-md text-body-md">Markets</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="vendors" href="#"><span class="material-symbols-outlined text-[20px]">cell_tower</span><span class="font-body-md text-body-md">Vendors</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="flow-canvas" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span class="font-body-md text-body-md">Flow Canvas</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="campaign-logs" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Campaign Logs</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="postbacks-and-s2s" href="#"><span class="material-symbols-outlined text-[20px]">sync_alt</span><span class="font-body-md text-body-md">Postbacks &amp; S2S</span></a><div class="my-space-xs border-t border-outline-variant/30"></div><span class="px-3 py-1 font-label-code text-label-code text-outline uppercase tracking-wider">Infrastructure</span><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="user-management" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">User Management</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="redis-cache" href="#"><span class="material-symbols-outlined text-[20px]">memory</span><span class="font-body-md text-body-md">Redis Cache</span></a></nav></div><div class="p-space-md border-t border-outline-variant/30 bg-surface-container-low"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-code text-label-code text-on-surface font-semibold">DCB GATEWAY 01</span></div><span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-code text-label-code">HEALTHY</span></div><div class="mt-1 text-on-surface-variant font-caption-legal text-caption-legal flex justify-between"><span>Throughput: 8,420 TPS</span><span>99.98%</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-md border-b border-outline-variant/30 z-40 px-space-md flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-0 max-w-xl"><nav class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant truncate"><a class="hover:text-primary transition-colors" href="#">Markets</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-primary transition-colors" href="#">India</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-primary transition-colors truncate" href="#">Airtel / xzy</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-primary transition-colors truncate" href="#">Campaign jhh</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="font-label-macro text-label-macro text-on-surface font-semibold truncate">Flow Builder</span></nav></div><div class="flex items-center gap-space-sm shrink-0"><div class="relative hidden xl:flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-64 pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/40 font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search MSISDN, Route ID, Node..." type="text"/></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container border border-outline-variant/30"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-code text-label-code text-on-surface font-semibold uppercase">Production / Live</span></div><div class="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low border border-outline-variant/30"><span class="material-symbols-outlined text-primary text-[16px]">swap_calls</span><span class="font-label-code text-label-code text-on-surface-variant">Carrier:</span><span class="font-label-code text-label-code text-primary font-semibold">UP (8/8)</span></div><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="flex items-center gap-1"><a class="px-2.5 py-1.5 rounded-lg border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface font-label-macro text-label-macro flex items-center gap-1 transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">account_tree</span><span>Flow Canvas</span></a><a class="px-2.5 py-1.5 rounded-lg border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface font-label-macro text-label-macro flex items-center gap-1 transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">monitoring</span><span>Vendor Stats</span></a><a class="px-2.5 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-macro text-label-macro font-semibold flex items-center gap-1 transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-[16px]">visibility</span><span>Preview</span></a></div><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="flex items-center gap-2 pl-1"><div class="hidden md:flex flex-col text-right"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Abhinav</span><span class="font-caption-legal text-caption-legal text-on-surface-variant leading-tight">Principal SecOps</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command & Status Ribbon -->
+<div class="p-space-lg flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Traffic Logs &amp; Session Waterfall Inspector</span>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-code text-label-code font-bold uppercase tracking-wider">LIVE INGESTION</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-code text-label-code">
+          ENGINE: TITAN-GATEWAY v4.8
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+        Real-time telecom click ingestion, carrier header enrichment tracing, and subscriber lifecycle waterfall across direct operator bridges.
+      </p>
+</div>
+<!-- Live Telemetry Controls -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<div class="hidden sm:flex items-center gap-3 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-caption-legal text-caption-legal">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">verified_user</span>
+<span>Carrier SLA: <strong class="text-on-surface font-label-macro">99.98%</strong></span>
+</div>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[15px]">database</span>
+<span>Ring Buffer: <strong class="text-on-surface font-label-macro">5,000 evt</strong></span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest p-1 rounded-lg shadow-sm">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-macro text-label-macro font-semibold flex items-center gap-1.5 shadow-sm hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[16px] animate-spin">sync</span>
+<span>Live (1s)</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-macro text-label-macro flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+<span>Pause</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-macro text-label-macro flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export HAR</span>
+</button>
+</div>
+</div>
+</div>
+<!-- KPI Telemetry Grid -->
+<div class="px-space-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-caption-legal text-caption-legal uppercase tracking-wider font-semibold">Ingestion Velocity</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed/30 text-primary font-label-code text-label-code font-bold">+18.4%</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">248.9k</span>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">total</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 bg-surface-container-low/50 rounded px-2 py-1">
+<span class="font-label-code text-label-code text-on-surface-variant">Peak Ingress</span>
+<span class="font-label-macro text-label-macro text-primary font-semibold">142 req/s</span>
+</div>
+</div>
+<div class="mt-2 h-7 w-full flex items-end gap-1">
+<span class="h-2 w-full bg-primary/20 rounded-t"></span>
+<span class="h-3 w-full bg-primary/30 rounded-t"></span>
+<span class="h-4 w-full bg-primary/40 rounded-t"></span>
+<span class="h-3 w-full bg-primary/30 rounded-t"></span>
+<span class="h-6 w-full bg-primary/60 rounded-t"></span>
+<span class="h-7 w-full bg-primary rounded-t"></span>
+<span class="h-5 w-full bg-primary/70 rounded-t"></span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary"></div>
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-caption-legal text-caption-legal uppercase tracking-wider font-semibold">MSISDN Resolution</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed/40 text-tertiary font-label-code text-label-code font-bold">Direct HE</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">89.4%</span>
+<span class="font-caption-legal text-caption-legal text-primary font-medium">Header Enriched</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-caption-legal font-caption-legal">
+<span class="text-on-surface-variant">2-Step OTP Fallback</span>
+<span class="font-label-macro text-label-macro text-on-surface font-semibold">10.6% (26.3k)</span>
+</div>
+</div>
+<div class="mt-3 w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-tertiary h-full rounded-full" style="width: 89.4%"></div>
+<div class="bg-secondary h-full rounded-full" style="width: 10.6%"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-caption-legal text-caption-legal uppercase tracking-wider font-semibold">Conversion (DCB)</span>
+<span class="font-label-code text-label-code text-secondary font-bold">1-CLICK SUB</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">4.12%</span>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">conv. rate</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 bg-surface-container-low/50 rounded px-2 py-1">
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">Billed Today</span>
+<span class="font-label-macro text-label-macro text-on-surface font-semibold">10,254 Subs</span>
+</div>
+</div>
+<div class="mt-2 flex items-center justify-between text-caption-legal font-caption-legal text-on-surface-variant">
+<span>Target eCPM</span>
+<span class="font-label-code text-label-code text-primary font-bold">$34.20</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-caption-legal text-caption-legal uppercase tracking-wider font-semibold">S2S Webhook Succeeded</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed/30 text-primary font-label-code text-label-code font-bold">HTTP 200</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">99.82%</span>
+<span class="font-caption-legal text-caption-legal text-primary">p99 18ms</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 bg-surface-container-low/50 rounded px-2 py-1">
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">Pending Retries</span>
+<span class="font-label-macro text-label-macro text-tertiary font-bold">4 in queue</span>
+</div>
+</div>
+<div class="mt-2 flex items-center gap-1 text-caption-legal font-caption-legal text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+<span>Zero dropouts across DSPs</span>
+</div>
+</div>
+<!-- KPI 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary"></div>
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-caption-legal text-caption-legal uppercase tracking-wider font-semibold">Latency Variance</span>
+<span class="font-label-code text-label-code text-on-surface-variant">p50 / p95</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">82ms</span>
+<span class="font-caption-legal text-caption-legal text-outline">/ 145ms p95</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 bg-surface-container-low/50 rounded px-2 py-1">
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">Fastest Route</span>
+<span class="font-label-macro text-label-macro text-primary font-bold">AE Etisalat 64ms</span>
+</div>
+</div>
+<div class="mt-2 flex items-center justify-between text-caption-legal font-caption-legal text-on-surface-variant">
+<span>Coverage</span>
+<span class="font-label-code text-label-code font-semibold text-on-surface">UAE · SA · EG · NG · KE</span>
+</div>
+</div>
+</div>
+<!-- Operational Filter Strip -->
+<div class="px-space-lg mt-space-md">
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full pl-9 pr-4 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-primary transition-all" placeholder="Filter by Click ID, MSISDN hash, Client IP, or Carrier ASN..." type="text" value="prop_987213"/>
+<span class="absolute right-3 top-2 text-[10px] font-label-code bg-surface-container text-on-surface-variant px-1.5 py-0.5 rounded">CMD + K</span>
+</div>
+<!-- Segment Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-macro text-label-macro font-semibold whitespace-nowrap shadow-sm flex items-center gap-1.5">
+<span>All Ingress</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest text-[11px]">248.9k</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-fixed/30 text-primary font-label-macro text-label-macro font-semibold whitespace-nowrap flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">flash_on</span>
+<span>Subscribed 1-Click HE</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary text-on-primary text-[11px]">9,842</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-macro text-label-macro whitespace-nowrap flex items-center gap-1.5">
+<span>OTP Fallback</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-[11px]">2,104</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-macro text-label-macro whitespace-nowrap flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Low Balance / Retries</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-[11px]">842</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-macro text-label-macro whitespace-nowrap flex items-center gap-1.5">
+<span>Blocked Proxies</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-[11px]">3,120</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Primary Split Screen Layout -->
+<div class="px-space-lg mt-space-md mb-space-lg grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- Left Column: Live Ingress Stream Table (7 cols / approx 58%) -->
+<div class="xl:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Feed Header -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">stream</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Live Inbound Ingress Stream</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-code text-label-code font-bold">AUTO-POLLING</span>
+</div>
+<div class="flex items-center gap-2 text-caption-legal font-caption-legal text-on-surface-variant">
+<span>Showing latest 50 events</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/40 text-on-surface-variant font-caption-legal text-caption-legal uppercase tracking-wider">
+<th class="py-2.5 px-3">Time &amp; Click ID</th>
+<th class="py-2.5 px-3">Carrier / ASN</th>
+<th class="py-2.5 px-3">Masked MSISDN</th>
+<th class="py-2.5 px-3">Source &amp; Bid</th>
+<th class="py-2.5 px-3">Protocol</th>
+<th class="py-2.5 px-3 text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row 1: Selected & Highlighted -->
+<tr class="bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer group">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-macro text-label-macro font-semibold text-primary">prop_987213</span>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">14:02:18.420</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-code text-label-code font-semibold text-on-surface">AE Etisalat 5G</span>
+</div>
+<span class="font-caption-legal text-caption-legal text-outline">AS5384 (Emirates)</span>
+</div>
+</td>
+<td class="py-3 px-3 font-label-macro text-label-macro text-on-surface">
+                +971 50 *** 4589
+              </td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">PropellerAds</span>
+<span class="font-caption-legal text-caption-legal text-primary font-semibold">CPA $2.50</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/40 text-primary font-label-code text-label-code font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">bolt</span>
+                  1-Click HE
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code font-bold uppercase">
+                  Subscribed
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-macro text-label-macro font-semibold text-on-surface">clck_554190</span>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">14:02:17.892</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-semibold text-on-surface">SA STC 4G</span>
+<span class="font-caption-legal text-caption-legal text-outline">AS25074 (Saudi Tel)</span>
+</div>
+</td>
+<td class="py-3 px-3 font-label-macro text-label-macro text-on-surface-variant">
+                +966 55 *** 1290
+              </td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Clickadu</span>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">CPC $0.14</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-label-code font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">password</span>
+                  2-Step OTP
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-code text-label-code font-bold uppercase">
+                  Pending OTP
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-macro text-label-macro font-semibold text-on-surface">adcash_77102</span>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">14:02:16.104</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-semibold text-on-surface">EG Vodafone LTE</span>
+<span class="font-caption-legal text-caption-legal text-outline">AS8452 (Vodafone EG)</span>
+</div>
+</td>
+<td class="py-3 px-3 font-label-macro text-label-macro text-on-surface">
+                +20 10 *** 8812
+              </td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">AdCash Direct</span>
+<span class="font-caption-legal text-caption-legal text-primary font-semibold">CPA $1.80</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/40 text-primary font-label-code text-label-code font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">bolt</span>
+                  1-Click HE
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code font-bold uppercase">
+                  Subscribed
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-macro text-label-macro font-semibold text-on-surface">prop_987211</span>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">14:02:14.331</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-semibold text-on-surface">KE Safaricom MPESA</span>
+<span class="font-caption-legal text-caption-legal text-outline">AS33771 (Safaricom)</span>
+</div>
+</td>
+<td class="py-3 px-3 font-label-macro text-label-macro text-outline">
+                [Not Enriched]
+              </td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">PropellerAds</span>
+<span class="font-caption-legal text-caption-legal text-outline">CPA $1.20</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-label-code font-bold">
+                  IP Shunt (Wi-Fi)
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-error font-label-code text-label-code font-bold uppercase">
+                  Low Bal / Drop
+                </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-macro text-label-macro font-semibold text-on-surface">pop_662890</span>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">14:02:12.780</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-semibold text-on-surface">AE du Telecom</span>
+<span class="font-caption-legal text-caption-legal text-outline">AS15802 (EITC UAE)</span>
+</div>
+</td>
+<td class="py-3 px-3 font-label-macro text-label-macro text-on-surface">
+                +971 55 *** 3109
+              </td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">PopAds Direct</span>
+<span class="font-caption-legal text-caption-legal text-primary font-semibold">CPA $2.50</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/40 text-primary font-label-code text-label-code font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">bolt</span>
+                  1-Click HE
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code font-bold uppercase">
+                  Subscribed
+                </span>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-macro text-label-macro font-semibold text-on-surface">dsp_890123</span>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">14:02:10.005</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-semibold text-on-surface">NG MTN Broadband</span>
+<span class="font-caption-legal text-caption-legal text-outline">AS29465 (MTN Nigeria)</span>
+</div>
+</td>
+<td class="py-3 px-3 font-label-macro text-label-macro text-outline">
+                [Blocked IP]
+              </td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Tonic RTB</span>
+<span class="font-caption-legal text-caption-legal text-outline">CPM $0.80</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-outline font-label-code text-label-code font-bold">
+                  VPN / Datacenter
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold uppercase">
+                  Blocked
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Feed Pagination & Status -->
+<div class="p-3 bg-surface-container-low/70 flex items-center justify-between text-caption-legal font-caption-legal text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Latency buffer: 12ms</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Zero socket drops</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors font-label-macro text-label-macro">Prev</button>
+<span class="px-2 font-label-code text-label-code text-on-surface font-semibold">1 / 4,978</span>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors font-label-macro text-label-macro">Next</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Protocol Inspector & Chronological Waterfall Drawer (5 cols / approx 42%) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- Session Detail Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col">
+<!-- Inspector Header -->
+<div class="flex items-start justify-between pb-3 bg-surface-container-low/30 rounded-lg p-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Inspection: prop_987213</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/40 text-primary font-label-code text-label-code font-bold">100% BILLED</span>
+</div>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">
+              Etisalat Direct Carrier Billing (DCB) Pipeline Tracing
+            </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Download Raw Logs">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Full Screen View">
+<span class="material-symbols-outlined text-[18px]">open_in_full</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Metadata Matrix -->
+<div class="grid grid-cols-2 gap-2 mt-space-sm p-3 rounded-lg bg-surface-container-low/60 font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="font-caption-legal text-caption-legal text-on-surface-variant uppercase font-semibold">Client Inbound IP</span>
+<span class="font-label-macro text-label-macro text-on-surface font-semibold">197.234.12.8</span>
+<span class="font-caption-legal text-caption-legal text-outline">Dubai, United Arab Emirates</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption-legal text-caption-legal text-on-surface-variant uppercase font-semibold">Carrier ASN</span>
+<span class="font-label-macro text-label-macro text-primary font-semibold">AS5384 (Emirates Tel)</span>
+<span class="font-caption-legal text-caption-legal text-outline">Direct GGSN Link 04</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-caption-legal text-caption-legal text-on-surface-variant uppercase font-semibold">Device &amp; Browser</span>
+<span class="font-body-sm text-body-sm text-on-surface">Chrome Mobile 122</span>
+<span class="font-caption-legal text-caption-legal text-outline">Samsung Galaxy S24 Ultra (5G)</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-caption-legal text-caption-legal text-on-surface-variant uppercase font-semibold">Enrichment Source</span>
+<span class="font-label-macro text-label-macro text-secondary font-semibold">x-msisdn-token</span>
+<span class="font-caption-legal text-caption-legal text-outline">Radius Gateway Authentication</span>
+</div>
+</div>
+<!-- Subscriber Identity Resolved Banner -->
+<div class="mt-3 p-3 rounded-lg bg-primary-fixed/20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">sim_card</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption-legal text-caption-legal text-primary font-bold uppercase">Subscribed MSISDN (Live)</span>
+<span class="font-label-macro text-label-macro text-on-surface font-bold tracking-wider">+971 50 *** 4589</span>
+</div>
+</div>
+<span class="font-label-code text-label-code px-2 py-1 rounded bg-primary text-on-primary font-bold">
+            3.50 AED/day
+          </span>
+</div>
+<!-- Chronological Waterfall Timeline (T0 - T6) -->
+<div class="mt-space-md">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-code text-label-code uppercase tracking-wider text-outline font-semibold">Chronological Event Waterfall</span>
+<span class="font-label-macro text-label-macro text-primary font-bold">Total Duration: 1,310ms</span>
+</div>
+<div class="relative pl-6 space-y-4 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-outline-variant/40">
+<!-- Step T0 -->
+<div class="relative flex flex-col group">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-baseline justify-between">
+<span class="font-label-code text-label-code font-bold text-on-surface">T0 (0ms) · Traffic Ingress</span>
+<span class="font-label-code text-label-code text-on-surface-variant font-medium">14:02:18.420</span>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">
+                Hit received from PropellerAds redirect gateway. Ingress token parsed &amp; verified.
+              </p>
+</div>
+<!-- Step T1 -->
+<div class="relative flex flex-col group">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-baseline justify-between">
+<span class="font-label-code text-label-code font-bold text-primary">T1 (+80ms) · Carrier Header Enrichment</span>
+<span class="font-label-code text-label-code text-primary font-semibold">Resolved in 80ms</span>
+</div>
+<div class="mt-1 p-2 rounded bg-surface-container-low font-label-code text-[11px] text-on-surface break-all">
+                HTTP/1.1 x-msisdn-he: 00971501234567 (Radius token confirmed via Etisalat Core node)
+              </div>
+</div>
+<!-- Step T2 -->
+<div class="relative flex flex-col group">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-baseline justify-between">
+<span class="font-label-code text-label-code font-bold text-on-surface">T2 (+150ms) · Dynamic LP Pre-fill</span>
+<span class="font-label-code text-label-code text-outline">+70ms delta</span>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">
+                Landing page rendered with localized Arabic/English consent and auto-masked MSISDN dial string.
+              </p>
+</div>
+<!-- Step T3 -->
+<div class="relative flex flex-col group">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-baseline justify-between">
+<span class="font-label-code text-label-code font-bold text-secondary">T3 (+850ms) · Subscriber Consent Click</span>
+<span class="font-label-code text-label-code text-secondary font-semibold">User Delay 700ms</span>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">
+                Explicit click on primary authorization CTA: <span class="font-semibold text-on-surface">"SUBSCRIBE NOW &amp; PLAY"</span>.
+              </p>
+</div>
+<!-- Step T4 -->
+<div class="relative flex flex-col group">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-baseline justify-between">
+<span class="font-label-code text-label-code font-bold text-primary">T4 (+1,120ms) · Direct Carrier Handshake</span>
+<span class="font-label-code text-label-code text-primary font-bold">200 SUCCESS</span>
+</div>
+<div class="mt-1 p-2 rounded bg-surface-container-low font-label-code text-[11px] text-on-surface break-all">
+                POST /etisalat/v2/charge -&gt; tx: eti_9981298 | auth: 09849204 | status: BILLED_ACTIVE
+              </div>
+</div>
+<!-- Step T5 -->
+<div class="relative flex flex-col group">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-baseline justify-between">
+<span class="font-label-code text-label-code font-bold text-on-surface">T5 (+1,200ms) · Ledger Commit</span>
+<span class="font-label-code text-label-code text-outline">+80ms delta</span>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">
+                Subscription recorded in PostgreSQL &amp; Redis Cluster: Daily recurring ledger active.
+              </p>
+</div>
+<!-- Step T6 -->
+<div class="relative flex flex-col group">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-baseline justify-between">
+<span class="font-label-code text-label-code font-bold text-primary">T6 (+1,310ms) · S2S Webhook Postback Ack</span>
+<span class="font-label-code text-label-code text-primary font-bold">HTTP 200 OK</span>
+</div>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">
+                Conversion fired to PropellerAds postback endpoint with payout parameter $2.50.
+              </p>
+</div>
+</div>
+</div>
+<!-- Inspector Control Actions -->
+<div class="mt-space-lg pt-space-md border-t border-surface-container flex flex-wrap items-center justify-between gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-macro text-label-macro font-semibold flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">data_object</span>
+<span>Raw JSON</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-macro text-label-macro flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Replay Session</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-macro text-label-macro font-semibold flex items-center gap-1.5 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Re-fire Postback</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Regulatory & Telecom Safe Guard Notice -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[22px] shrink-0">policy</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">TRA UAE Compliance Verified</span>
+<p class="font-caption-legal text-caption-legal text-on-surface-variant mt-0.5">
+            Subscriber confirmed through standard 24-hour unsubscribe notification SMS dispatched by operator node. Zero customer dispute flags.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Operator Route Latency & Error Breakdown Footer Cards -->
+<div class="px-space-lg mb-space-2xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">speed</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Carrier Route Latency &amp; Error Variance</span>
+</div>
+<span class="font-caption-legal text-caption-legal text-on-surface-variant">Real-time sampling window: 15 mins</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Route 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-macro text-label-macro font-bold text-on-surface">Etisalat 5G</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-label-code text-[10px]">UAE</span>
+</div>
+<span class="font-label-macro text-label-macro font-bold text-primary">64ms</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-caption-legal font-caption-legal text-on-surface-variant">
+<span>Success Rate: <strong class="text-on-surface font-label-code">99.96%</strong></span>
+<span class="text-primary font-semibold">Fastest Node</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 98%"></div>
+</div>
+</div>
+<!-- Route 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-macro text-label-macro font-bold text-on-surface">STC Saudi</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-label-code text-[10px]">KSA</span>
+</div>
+<span class="font-label-macro text-label-macro font-bold text-tertiary">82ms</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-caption-legal font-caption-legal text-on-surface-variant">
+<span>Success Rate: <strong class="text-on-surface font-label-code">99.88%</strong></span>
+<span class="text-tertiary font-semibold">Nominal SLA</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 94%"></div>
+</div>
+</div>
+<!-- Route 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-macro text-label-macro font-bold text-on-surface">Vodafone EG</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-label-code text-[10px]">EGY</span>
+</div>
+<span class="font-label-macro text-label-macro font-bold text-on-surface">114ms</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-caption-legal font-caption-legal text-on-surface-variant">
+<span>Success Rate: <strong class="text-on-surface font-label-code">99.42%</strong></span>
+<span class="text-outline font-semibold">Acceptable</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 86%"></div>
+</div>
+</div>
+<!-- Route 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-macro text-label-macro font-bold text-on-surface">Safaricom MPESA</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-label-code text-[10px]">KEN</span>
+</div>
+<span class="font-label-macro text-label-macro font-bold text-secondary">98ms</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-caption-legal font-caption-legal text-on-surface-variant">
+<span>Success Rate: <strong class="text-on-surface font-label-code">99.70%</strong></span>
+<span class="text-secondary font-semibold">Active Tunnel</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 90%"></div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
